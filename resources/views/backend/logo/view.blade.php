@@ -16,9 +16,12 @@
             @include('layouts._message')
             <div class="card">
                 <div class="card-body">
+
                     <h5 class="card-title">
                         Users List
+                        @if($countLogo < 1)
                         <a href="{{route('panel.logo.add')}}" class="btn btn-primary" style="float:right">Add new</a>
+                        @endif
                     </h5>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">

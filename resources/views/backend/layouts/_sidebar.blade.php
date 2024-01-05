@@ -26,7 +26,8 @@
                     </a>
                 </li>
             </ul>
-        </li><!-- End Profile Page Nav -->
+        </li>
+        <!-- logo sections  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#logos-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-gem"></i><span>Logo Management</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -44,6 +45,25 @@
                 </li>
             </ul>
         </li>
+        <!-- sliders section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#sliders-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-gem"></i><span>Sliders Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="sliders-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.sliders.view')}}">
+                        <i class="bi bi-circle"></i><span>View sliders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.sliders.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Slider</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Services section  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#services-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-gem"></i><span>Services Management</span><i class="bi bi-chevron-down ms-auto"></i>

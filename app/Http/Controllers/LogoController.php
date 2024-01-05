@@ -14,8 +14,9 @@ use Auth;
 
 
 class LogoController extends Controller
-{
+{ 
     public function view(){
+        $data['countLogo'] = Logo::count();
         $data['allData'] = Logo::all();
         // dd('ok');
         return view('backend.logo.view', $data);
