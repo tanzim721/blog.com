@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('missions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('image')->nullable();
+            $table->longText('title')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }

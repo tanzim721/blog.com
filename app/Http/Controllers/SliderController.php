@@ -13,7 +13,7 @@ use Hash;
 use Mail;
 use Str;
 use Auth;  
-
+ 
 class SliderController extends Controller
 {
     public function view(){

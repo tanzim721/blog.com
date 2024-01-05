@@ -30,7 +30,7 @@
         <!-- logo sections  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#logos-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-gem"></i><span>Logo Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-image-alt"></i><span>Logo Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="logos-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
@@ -48,7 +48,7 @@
         <!-- sliders section  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#sliders-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-gem"></i><span>Sliders Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-sliders"></i><span>Sliders Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="sliders-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
@@ -58,6 +58,24 @@
                 </li>
                 <li>
                     <a href="{{route('panel.sliders.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Slider</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- mission section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#missions-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-ui-radios-grid"></i><span>Mission Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="missions-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.missions.view')}}">
+                        <i class="bi bi-circle"></i><span>View Mission</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.missions.add')}}">
                         <i class="bi bi-circle"></i><span>Add Slider</span>
                     </a>
                 </li>
