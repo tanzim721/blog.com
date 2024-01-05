@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\MissionController;
+use App\Http\Controllers\VisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,13 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::post('panel/missions/update/{id}', [MissionController::class, 'update'])->name('panel.missions.update');
     Route::get('panel/missions/delete/{id}', [MissionController::class, 'delete'])->name('panel.missions.delete');
 
+    // Vision Controller............. 
+    Route::get('panel/visions/view', [VisionController::class, 'view'])->name('panel.visions.view');
+    Route::get('panel/visions/add', [VisionController::class, 'add'])->name('panel.visions.add');
+    Route::post('panel/visions/store', [VisionController::class, 'store'])->name('panel.visions.store');
+    Route::get('panel/visions/edit/{id}', [VisionController::class, 'edit'])->name('panel.visions.edit');
+    Route::post('panel/visions/update/{id}', [VisionController::class, 'update'])->name('panel.visions.update');
+    Route::get('panel/visions/delete/{id}', [VisionController::class, 'delete'])->name('panel.visions.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');

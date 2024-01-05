@@ -81,6 +81,24 @@
                 </li>
             </ul>
         </li>
+        <!-- vision section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#visions-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-ui-radios-grid"></i><span>Vision Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="visions-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.visions.view')}}">
+                        <i class="bi bi-circle"></i><span>View Vision</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.visions.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Slider</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
         <!-- Services section  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#services-nav" data-bs-toggle="collapse" href="#">
