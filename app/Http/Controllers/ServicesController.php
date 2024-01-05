@@ -20,43 +20,31 @@ class ServicesController extends Controller
         return view('backend.service.view', $data);
     }
     public function add(){
-        return view('backend.logo.add');
+        return view('backend.service.add');
     }
     public function store(Request $request){
-        $data = new Logo();
+        $data = new Service();
+        $data->short_title = $request->short_title;
+        $data->long_title = $request->long_title;
         $data->created_by = Auth::user()->id;
-        if($request->file('image')){
-            $file= $request->file('image');
-            $filename=date('YMDHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/logo_images'),$filename);
-            $data['logo']=$filename;
-        }
         $data->save(); 
-        return redirect()->route('panel.logo.view')->with('success', "Logo Successfully Stored.");
+        return redirect()->route('panel.services.view')->with('success', "Services Successfully Stored.");
     }
     public function edit($id){
-        $editData = Logo::find($id);
-        return view('backend.logo.edit', compact('editData'));
+        $editData = Service::find($id);
+        return view('backend.service.edit', compact('editData'));
     }
     public function update($id, Request $request){
-        $data = Logo::find($id);
-        if($request->file('image')){
-            $file= $request->file('image');
-            @unlink(public_path('upload/logo_images'.$data->image));
-            $filename=date('YMDHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/logo_images'),$filename);
-            $data['logo']=$filename;
-        }
+        $data = Service::find($id);
+        $data->short_title = $request->short_title;
+        $data->long_title = $request->long_title;
+        $data->updated_by = Auth::user()->id;
         $data->save(); 
-        return redirect()->route('panel.logo.view')->with('success', "Logo Successfully Updated.");
+        return redirect()->route('panel.services.view')->with('success', "Service Successfully Updated.");
     }
     public function delete($id){
-        $data = Logo::find($id);
-        $data->updated_by = Auth::user()->id;
-        if (file_exists('upload/logo_images/' . $data->logo) AND ! empty ($data->logo)) {
-            unlink('upload/logo_images/'.$data->logo);
-        }
+        $data = Service::find($id);
         $data->delete();
-        return redirect()->route('panel.logo.view')->with('success', 'Logo successfully deleted.');
+        return redirect()->route('panel.services.view')->with('success', 'Service successfully deleted.');
     }
 }

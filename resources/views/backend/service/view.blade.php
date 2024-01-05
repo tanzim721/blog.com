@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         Service List
-                        <a href="{{route('panel.services.add')}}" class="btn btn-primary" style="float:right">Add new</a>
+                        <a href="{{route('panel.services.add')}}" class="btn btn-success" style="float:right">Add new</a>
                     </h5>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">
@@ -27,7 +27,7 @@
                             <th scope="col">No</th>
                             <th scope="col">Short Title</th>
                             <th scope="col">Long Title</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" style="width:150px;">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
@@ -55,4 +54,3 @@
 
 @section('script')
 @endsection
-
