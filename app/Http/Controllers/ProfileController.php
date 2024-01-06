@@ -35,7 +35,7 @@ class ProfileController extends Controller
         $data->gender = $request->gender;
         if($request->file('image')){
             $file= $request->file('image');
-            @unlink(\public_path('upload/logo/'.$data->logo));
+            @unlink(\public_path('upload/user_images/'.$data->image));
             $filename=date('YMDHi').$file->getClientOriginalName();
             $file->move(public_path('upload/user_images'),$filename);
             $data['image']=$filename;
