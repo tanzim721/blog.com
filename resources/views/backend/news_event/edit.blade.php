@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             Edit News and Events
-                            <a class="btn btn-success btn-sm" href="{{route('panel.news_events.view')}}" style="float:right;">Slider list</a>
+                            <a class="btn btn-success btn-sm" href="{{route('panel.news_events.view')}}" style="float:right;">News and event list</a>
                         </h5>
                         <br>
                         <!-- Vertical Form -->

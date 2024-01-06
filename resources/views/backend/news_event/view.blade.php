@@ -41,8 +41,8 @@
                                     <td>{{$news_events->short_title}}</td>
                                     <td>{{$news_events->long_title}}</td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.news_events.edit', $news_events->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.news_events.delete', $news_events->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.news_events.edit', $news_events->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.news_events.delete', $news_events->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

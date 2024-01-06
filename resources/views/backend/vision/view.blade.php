@@ -39,8 +39,8 @@
                                     <td><img src="{{(!empty($vision->image))?url('upload/vision_images/',$vision->image):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td>
                                     <td>{{$vision->title}}</td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.visions.edit', $vision->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.visions.delete', $vision->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.visions.edit', $vision->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.visions.delete', $vision->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

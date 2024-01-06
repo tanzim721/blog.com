@@ -37,8 +37,8 @@
                                     <td>{{$service->short_title}}</td>
                                     <td>{{$service->long_title}}</td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.services.edit', $service->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.services.delete', $service->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.services.edit', $service->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.services.delete', $service->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

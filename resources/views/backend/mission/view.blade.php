@@ -39,8 +39,8 @@
                                     <td><img src="{{(!empty($mission->image))?url('upload/mission_images/',$mission->image):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td>
                                     <td>{{$mission->title}}</td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.missions.edit', $mission->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.missions.delete', $mission->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.missions.edit', $mission->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.missions.delete', $mission->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

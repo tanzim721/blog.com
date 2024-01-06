@@ -39,8 +39,8 @@
                                     <td>{{$slider->short_title}}</td>
                                     <td>{{$slider->long_title}}</td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.sliders.edit', $slider->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.sliders.delete', $slider->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.sliders.edit', $slider->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.sliders.delete', $slider->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

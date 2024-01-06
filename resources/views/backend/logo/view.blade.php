@@ -38,8 +38,8 @@
                                     <td>{{$key+1}}</td>
                                     <td><img src="{{(!empty($logo->logo))?url('upload/logo_images/',$logo->logo):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td>
                                     <td>
-                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.logo.edit', $logo->id)}}">Edit</a>
-                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.logo.delete', $logo->id)}}">Delete</a>
+                                        <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.logo.edit', $logo->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                        <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.logo.delete', $logo->id)}}"><span class="bi bi-trash"></span></a>
                                     </td>
                                 </tr>
                             @endforeach

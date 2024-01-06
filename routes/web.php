@@ -13,6 +13,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\VisionController;
 use App\Http\Controllers\NewsEventController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,6 +99,14 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/news_events/edit/{id}', [NewsEventController::class, 'edit'])->name('panel.news_events.edit');
     Route::post('panel/news_events/update/{id}', [NewsEventController::class, 'update'])->name('panel.news_events.update');
     Route::get('panel/news_events/delete/{id}', [NewsEventController::class, 'delete'])->name('panel.news_events.delete');
+
+    // Contact Controller.............
+    Route::get('panel/contacts/view', [ContactController::class, 'view'])->name('panel.contacts.view');
+    Route::get('panel/contacts/add', [ContactController::class, 'add'])->name('panel.contacts.add');
+    Route::post('panel/contacts/store', [ContactController::class, 'store'])->name('panel.contacts.store');
+    Route::get('panel/contacts/edit/{id}', [ContactController::class, 'edit'])->name('panel.contacts.edit');
+    Route::post('panel/contacts/update/{id}', [ContactController::class, 'update'])->name('panel.contacts.update');
+    Route::get('panel/contacts/delete/{id}', [ContactController::class, 'delete'])->name('panel.contacts.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');
