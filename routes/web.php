@@ -14,6 +14,7 @@ use App\Http\Controllers\MissionController;
 use App\Http\Controllers\VisionController;
 use App\Http\Controllers\NewsEventController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,7 +93,7 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::post('panel/visions/update/{id}', [VisionController::class, 'update'])->name('panel.visions.update');
     Route::get('panel/visions/delete/{id}', [VisionController::class, 'delete'])->name('panel.visions.delete');
 
-    // News and Events Controller............. 
+    // News and Events Controller................
     Route::get('panel/news_events/view', [NewsEventController::class, 'view'])->name('panel.news_events.view');
     Route::get('panel/news_events/add', [NewsEventController::class, 'add'])->name('panel.news_events.add');
     Route::post('panel/news_events/store', [NewsEventController::class, 'store'])->name('panel.news_events.store');
@@ -107,6 +108,14 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/contacts/edit/{id}', [ContactController::class, 'edit'])->name('panel.contacts.edit');
     Route::post('panel/contacts/update/{id}', [ContactController::class, 'update'])->name('panel.contacts.update');
     Route::get('panel/contacts/delete/{id}', [ContactController::class, 'delete'])->name('panel.contacts.delete');
+
+    // About us Controller.............
+    Route::get('panel/abouts/view', [AboutController::class, 'view'])->name('panel.abouts.view');
+    Route::get('panel/abouts/add', [AboutController::class, 'add'])->name('panel.abouts.add');
+    Route::post('panel/abouts/store', [AboutController::class, 'store'])->name('panel.abouts.store');
+    Route::get('panel/abouts/edit/{id}', [AboutController::class, 'edit'])->name('panel.abouts.edit');
+    Route::post('panel/abouts/update/{id}', [AboutController::class, 'update'])->name('panel.abouts.update');
+    Route::get('panel/abouts/delete/{id}', [AboutController::class, 'delete'])->name('panel.abouts.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');

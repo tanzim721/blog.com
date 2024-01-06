@@ -18,7 +18,7 @@ use Auth;
 class ContactController extends Controller
 {
     public function view(){
-        // $data['countLogo'] = Logo::count();
+        // $data['countContact'] = Contact::count();
         $data['allData'] = Contact::all();
         return view('backend.contact.view', $data);
     }

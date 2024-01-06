@@ -117,9 +117,10 @@
                 </li>
             </ul>
         </li>
+        <!-- Contact section .................-->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#contact-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-calendar4-event"></i><span>Contact</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-person-square"></i><span>Contact</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="contact-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
@@ -130,6 +131,24 @@
                 <li>
                     <a href="{{route('panel.contacts.add')}}">
                         <i class="bi bi-circle"></i><span>Add Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- About Us section ................. -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#about-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person-square"></i><span>About</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="about-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.abouts.view')}}">
+                        <i class="bi bi-circle"></i><span>View About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.abouts.add')}}">
+                        <i class="bi bi-circle"></i><span>Add About</span>
                     </a>
                 </li>
             </ul>
