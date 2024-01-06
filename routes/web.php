@@ -15,6 +15,8 @@ use App\Http\Controllers\VisionController;
 use App\Http\Controllers\NewsEventController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PartnerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -116,6 +118,14 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/abouts/edit/{id}', [AboutController::class, 'edit'])->name('panel.abouts.edit');
     Route::post('panel/abouts/update/{id}', [AboutController::class, 'update'])->name('panel.abouts.update');
     Route::get('panel/abouts/delete/{id}', [AboutController::class, 'delete'])->name('panel.abouts.delete');
+
+    // Partner Controller.............
+    Route::get('panel/partners/view', [PartnerController::class, 'view'])->name('panel.partners.view');
+    Route::get('panel/partners/add', [PartnerController::class, 'add'])->name('panel.partners.add');
+    Route::post('panel/partners/store', [PartnerController::class, 'store'])->name('panel.partners.store');
+    Route::get('panel/partners/edit/{id}', [PartnerController::class, 'edit'])->name('panel.partners.edit');
+    Route::post('panel/partners/update/{id}', [PartnerController::class, 'update'])->name('panel.partners.update');
+    Route::get('panel/partners/delete/{id}', [PartnerController::class, 'delete'])->name('panel.partners.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');

@@ -138,7 +138,7 @@
         <!-- About Us section ................. -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#about-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-person-square"></i><span>About</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-card-checklist"></i><span>About</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="about-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
@@ -149,6 +149,26 @@
                 <li>
                     <a href="{{route('panel.abouts.add')}}">
                         <i class="bi bi-circle"></i><span>Add About</span>
+             
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Partner section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#partner-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person-plus-fill"></i><span>Partner</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="partner-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.partners.view')}}">
+                        <i class="bi bi-circle"></i><span>View Partner</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.partners.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Partner</span>
+             
                     </a>
                 </li>
             </ul>
