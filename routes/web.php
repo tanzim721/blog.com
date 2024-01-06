@@ -12,6 +12,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\VisionController;
+use App\Http\Controllers\NewsEventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,14 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/visions/edit/{id}', [VisionController::class, 'edit'])->name('panel.visions.edit');
     Route::post('panel/visions/update/{id}', [VisionController::class, 'update'])->name('panel.visions.update');
     Route::get('panel/visions/delete/{id}', [VisionController::class, 'delete'])->name('panel.visions.delete');
+
+    // News and Events Controller............. 
+    Route::get('panel/news_events/view', [NewsEventController::class, 'view'])->name('panel.news_events.view');
+    Route::get('panel/news_events/add', [NewsEventController::class, 'add'])->name('panel.news_events.add');
+    Route::post('panel/news_events/store', [NewsEventController::class, 'store'])->name('panel.news_events.store');
+    Route::get('panel/news_events/edit/{id}', [NewsEventController::class, 'edit'])->name('panel.news_events.edit');
+    Route::post('panel/news_events/update/{id}', [NewsEventController::class, 'update'])->name('panel.news_events.update');
+    Route::get('panel/news_events/delete/{id}', [NewsEventController::class, 'delete'])->name('panel.news_events.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');

@@ -5,13 +5,13 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2)!='dashboard')collapse @endif" href="{{url('panel/dashboard')}}">
+            <a class="nav-link collapsed" href="{{url('panel/dashboard')}}">
             <i class="bi bi-grid"></i>
             <span>Dashboard</span>
             </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
-            <a class="nav-link" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-person"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
@@ -95,6 +95,24 @@
                 <li>
                     <a href="{{route('panel.visions.add')}}">
                         <i class="bi bi-circle"></i><span>Add Slider</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- News and Events section......  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#news_event-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-calendar4-event"></i><span>News and Events</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="news_event-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.news_events.view')}}">
+                        <i class="bi bi-circle"></i><span>View News and Events</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.news_events.add')}}">
+                        <i class="bi bi-circle"></i><span>Add News and Events</span>
                     </a>
                 </li>
             </ul>

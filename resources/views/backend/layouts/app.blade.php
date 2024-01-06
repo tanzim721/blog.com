@@ -24,7 +24,7 @@
     <link href="{{asset('assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
-
+    
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     @yield('style')
@@ -52,6 +52,10 @@
     <script src="{{asset('assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
     <script src="{{asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
     <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+
+    <!-- datepicker  -->
+    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Template Main JS File -->
     <script src="{{asset('assets/js/main.js')}}"></script>
