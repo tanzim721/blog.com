@@ -222,6 +222,13 @@
                     </a>
                 </li>
             </ul>
+            <ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.merchandisinglist.view')}}">
+                        <i class="bi bi-circle"></i><span>Merchandising list</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         
     </ul>

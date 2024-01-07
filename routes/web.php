@@ -18,6 +18,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\QualityController;
 use App\Http\Controllers\MerchandisingController;
+use App\Http\Controllers\MerchandisingListController;
 
 
 /*
@@ -162,6 +163,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [MerchandisingController::class, 'edit'])->name('panel.merchandisings.edit');
         Route::post('/update/{id}', [MerchandisingController::class, 'update'])->name('panel.merchandisings.update');
         Route::get('/delete/{id}', [MerchandisingController::class, 'delete'])->name('panel.merchandisings.delete');
+    });
+    // Merchindising list ............
+    Route::prefix('merchandisinglist')->group(function(){
+        Route::get('/view', [MerchandisingListController::class, 'view'])->name('panel.merchandisinglist.view');
+        Route::get('/add', [MerchandisingListController::class, 'add'])->name('panel.merchandisinglist.add');
+        Route::post('/store', [MerchandisingListController::class, 'store'])->name('panel.merchandisinglist.store');
+        Route::get('/edit/{id}', [MerchandisingListController::class, 'edit'])->name('panel.merchandisinglist.edit');
+        Route::post('/update/{id}', [MerchandisingListController::class, 'update'])->name('panel.merchandisinglist.update');
+        Route::get('/delete/{id}', [MerchandisingListController::class, 'delete'])->name('panel.merchandisinglist.delete');
     });
 
 
