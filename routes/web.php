@@ -17,6 +17,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\QualityController;
+use App\Http\Controllers\MerchandisingController;
 
 
 /*
@@ -154,14 +155,15 @@ Route::group(['middleware' => 'adminuser'], function(){
 
     // merchandising sectioin ....
     // Merchandising Controller for long description and image............. 
-    Route::get('panel/merchandisings/view', [MerchandisingController::class, 'view'])->name('panel.merchandisings.view');
-    Route::get('panel/merchandisings/add', [MerchandisingController::class, 'add'])->name('panel.merchandisings.add');
-    Route::post('panel/merchandisings/store', [MerchandisingController::class, 'store'])->name('panel.merchandisings.store');
-    Route::get('panel/merchandisings/edit/{id}', [MerchandisingController::class, 'edit'])->name('panel.merchandisings.edit');
-    Route::post('panel/merchandisings/update/{id}', [MerchandisingController::class, 'update'])->name('panel.merchandisings.update');
-    Route::get('panel/merchandisings/delete/{id}', [MerchandisingController::class, 'delete'])->name('panel.merchandisings.delete');
+    Route::prefix('merchandisings')->group(function(){
+        Route::get('/view', [MerchandisingController::class, 'view'])->name('panel.merchandisings.view');
+        Route::get('/add', [MerchandisingController::class, 'add'])->name('panel.merchandisings.add');
+        Route::post('/store', [MerchandisingController::class, 'store'])->name('panel.merchandisings.store');
+        Route::get('/edit/{id}', [MerchandisingController::class, 'edit'])->name('panel.merchandisings.edit');
+        Route::post('/update/{id}', [MerchandisingController::class, 'update'])->name('panel.merchandisings.update');
+        Route::get('/delete/{id}', [MerchandisingController::class, 'delete'])->name('panel.merchandisings.delete');
+    });
 
-    
 
 });
 
