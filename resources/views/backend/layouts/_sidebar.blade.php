@@ -173,6 +173,25 @@
                 </li>
             </ul>
         </li>
+        <!-- Partner section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#quality-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person-plus-fill"></i><span>Quality</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="quality-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.qualitys.view')}}">
+                        <i class="bi bi-circle"></i><span>View Partner</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.qualitys.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Partner</span>
+             
+                    </a>
+                </li>
+            </ul>
+        </li>
         <!-- Services section  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#services-nav" data-bs-toggle="collapse" href="#">

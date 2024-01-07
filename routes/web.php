@@ -16,6 +16,7 @@ use App\Http\Controllers\NewsEventController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\QualityController;
 
 
 /*
@@ -126,6 +127,14 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/partners/edit/{id}', [PartnerController::class, 'edit'])->name('panel.partners.edit');
     Route::post('panel/partners/update/{id}', [PartnerController::class, 'update'])->name('panel.partners.update');
     Route::get('panel/partners/delete/{id}', [PartnerController::class, 'delete'])->name('panel.partners.delete');
+
+    // Partner Controller.............
+    Route::get('panel/qualitys/view', [QualityController::class, 'view'])->name('panel.qualitys.view');
+    Route::get('panel/qualitys/add', [QualityController::class, 'add'])->name('panel.qualitys.add');
+    Route::post('panel/qualitys/store', [QualityController::class, 'store'])->name('panel.qualitys.store');
+    Route::get('panel/qualitys/edit/{id}', [QualityController::class, 'edit'])->name('panel.qualitys.edit');
+    Route::post('panel/qualitys/update/{id}', [QualityController::class, 'update'])->name('panel.qualitys.update');
+    Route::get('panel/qualitys/delete/{id}', [QualityController::class, 'delete'])->name('panel.qualitys.delete');
 
     // Services controller ............
     Route::get('panel/services/view', [ServicesController::class, 'view'])->name('panel.services.view');
