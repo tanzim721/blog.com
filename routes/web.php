@@ -20,6 +20,8 @@ use App\Http\Controllers\QualityController;
 use App\Http\Controllers\MerchandisingController;
 use App\Http\Controllers\MerchandisingListController;
 use App\Http\Controllers\SupplierIdentifierController;
+use App\Http\Controllers\CompititivePricingController;
+
 
 
 /*
@@ -182,6 +184,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [SupplierIdentifierController::class, 'edit'])->name('panel.supplier_identifiers.edit');
         Route::post('/update/{id}', [SupplierIdentifierController::class, 'update'])->name('panel.supplier_identifiers.update');
         Route::get('/delete/{id}', [SupplierIdentifierController::class, 'delete'])->name('panel.supplier_identifiers.delete');
+    });
+    // Compititive Pricing list................ 
+    Route::prefix('compititive_pricings')->group(function(){
+        Route::get('/view', [CompititivePricingController::class, 'view'])->name('panel.compititive_pricings.view');
+        Route::get('/add', [CompititivePricingController::class, 'add'])->name('panel.compititive_pricings.add');
+        Route::post('/store', [CompititivePricingController::class, 'store'])->name('panel.compititive_pricings.store');
+        Route::get('/edit/{id}', [CompititivePricingController::class, 'edit'])->name('panel.compititive_pricings.edit');
+        Route::post('/update/{id}', [CompititivePricingController::class, 'update'])->name('panel.compititive_pricings.update');
+        Route::get('/delete/{id}', [CompititivePricingController::class, 'delete'])->name('panel.compititive_pricings.delete');
     });
 
 

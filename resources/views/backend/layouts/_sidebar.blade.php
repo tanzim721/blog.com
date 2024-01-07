@@ -236,6 +236,14 @@
                     </a>
                 </li>
             </ul>
+            <ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.compititive_pricings.view')}}">
+                        <i class="bi bi-circle"></i><span>Compititive Pricing</span>
+                    </a>
+                </li>
+            </ul>
+            
         </li>
         
     </ul>
