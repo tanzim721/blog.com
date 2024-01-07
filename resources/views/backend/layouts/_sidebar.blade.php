@@ -1,4 +1,8 @@
-
+@php 
+    $prefix = Request::route()->getPrefix();
+    $route = Route::current()->getName();
+@endphp
+<!-- @dd($route) -->
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
 
