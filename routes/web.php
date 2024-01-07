@@ -53,9 +53,9 @@ Route::group(['middleware' => 'adminuser'], function(){
     // User controller ............... 
     Route::get('panel/user/list', [UserController::class, 'user'])->name('panel.user.list');
     Route::get('panel/user/add', [UserController::class, 'add_user'])->name('panel.user.add');
-    Route::post('panel/user/add', [UserController::class, 'insert_user'])->name('panel.user.store');
+    Route::post('panel/user/store', [UserController::class, 'insert_user'])->name('panel.user.store');
     Route::get('panel/user/edit/{id}', [UserController::class, 'edit_user'])->name('panel.user.edit');
-    Route::post('panel/user/edit/{id}', [UserController::class, 'update_user'])->name('panel.user.update');
+    Route::post('panel/user/update/{id}', [UserController::class, 'update_user'])->name('panel.user.update');
     Route::get('panel/user/delete/{id}', [UserController::class, 'delete_user'])->name('panel.user.delete');
 
     // profile view for admin ........
@@ -151,6 +151,17 @@ Route::group(['middleware' => 'adminuser'], function(){
     Route::get('panel/category/edit/{id}', [CategoryController::class, 'edit_category'])->name('panel.category.edit');
     Route::post('panel/category/edit/{id}', [CategoryController::class, 'update_category'])->name('panel.category.update');
     Route::get('panel/category/delete/{id}', [CategoryController::class, 'delete_category'])->name('panel.category.delete');
+
+    // merchandising sectioin ....
+    // Merchandising Controller for long description and image............. 
+    Route::get('panel/merchandisings/view', [MerchandisingController::class, 'view'])->name('panel.merchandisings.view');
+    Route::get('panel/merchandisings/add', [MerchandisingController::class, 'add'])->name('panel.merchandisings.add');
+    Route::post('panel/merchandisings/store', [MerchandisingController::class, 'store'])->name('panel.merchandisings.store');
+    Route::get('panel/merchandisings/edit/{id}', [MerchandisingController::class, 'edit'])->name('panel.merchandisings.edit');
+    Route::post('panel/merchandisings/update/{id}', [MerchandisingController::class, 'update'])->name('panel.merchandisings.update');
+    Route::get('panel/merchandisings/delete/{id}', [MerchandisingController::class, 'delete'])->name('panel.merchandisings.delete');
+
+    
 
 });
 

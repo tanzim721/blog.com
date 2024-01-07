@@ -5,7 +5,7 @@
     <div class="pagetitle">
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{url('panel/dashboard')}}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{route('panel.dashboard')}}">Home</a></li>
                 <li class="breadcrumb-item">User</li>
             </ol>
         </nav>
@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         Users List
-                        <a href="{{url('panel/user/add')}}" class="btn btn-primary" style="float:right">Add new</a>
+                        <a href="{{route('panel.user.add')}}" class="btn btn-primary" style="float:right">Add new</a>
                     </h5>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">
@@ -43,8 +43,8 @@
                                     <td>{{ !empty($value->status) ? 'Active' : 'Inactive' }}</td>
                                     <td>{{ date('d-m-Y H:i A', strtotime($value->created_at)) }}</td>
                                     <td>
-                                        <a href="{{url('panel/user/edit/'.$value->id)}}" class="btn btn-primary">Edit</a>
-                                        <a onclick="return confirm(' Are you sure you want to delete?');" href="{{url('panel/user/delete/'.$value->id)}}" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{route('panel.user.edit'.$value->id)}}" class="btn btn-primary">Edit</a>
+                                        <a onclick="return confirm(' Are you sure you want to delete?');" href="{{route('panel.user.delete'.$value->id)}}" class="btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
                             @empty

@@ -5,8 +5,8 @@
     <div class="pagetitle">
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{url('panel/dashboard')}}">Home</a></li>
-                <li class="breadcrumb-item">Logo</li>
+                <li class="breadcrumb-item"><a href="{{route('panel.dashboard')}}">Home</a></li>
+                <li class="breadcrumb-item">User</li>
             </ol>
         </nav>
     </div>

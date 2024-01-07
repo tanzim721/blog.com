@@ -5,7 +5,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{url('panel/dashboard')}}">
+            <a class="nav-link collapsed" href="{{route('panel.dashboard')}}">
             <i class="bi bi-grid"></i>
             <span>Dashboard</span>
             </a>
@@ -16,12 +16,12 @@
             </a>
             <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{url('panel/user/list')}}">
+                    <a href="{{route('panel.user.list')}}">
                         <i class="bi bi-circle"></i><span>Manage User</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('panel/user/add')}}">
+                    <a href="{{route('panel.user.add')}}">
                         <i class="bi bi-circle"></i><span>Add User</span>
                     </a>
                 </li>
@@ -206,6 +206,25 @@
                 <li>
                     <a href="{{route('panel.services.add')}}">
                         <i class="bi bi-circle"></i><span>Add Services</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- Team section here m  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#quality-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-person-plus-fill"></i><span>Quality</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="quality-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.qualitys.view')}}">
+                        <i class="bi bi-circle"></i><span>View Partner</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.qualitys.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Partner</span>
+             
                     </a>
                 </li>
             </ul>
