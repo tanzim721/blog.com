@@ -1,8 +1,9 @@
-@php 
-    $prefix = Request::route()->getPrefix();
-    $route = Route::current()->getName();
+@php
+    $prefix=Request::route()->getPrefix();
+    $route=Route::current()->getName();
 @endphp
-<!-- @dd($route) -->
+
+
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
 
@@ -14,36 +15,36 @@
             <span>Dashboard</span>
             </a>
         </li><!-- End Dashboard Nav -->
-        <li class="nav-item">
+        <li class="nav-item has-treeview {{ ($prefix=='/user')?'menu-open': '' }}">
             <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-person"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{route('panel.user.list')}}">
+                    <a href="{{route('panel.user.list')}}" class="nav-link {{ ($route=='panel.user.list')?'active':'' }}">
                         <i class="bi bi-circle"></i><span>Manage User</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.user.add')}}">
+                    <a href="{{route('panel.user.add')}}" class="nav-link {{ ($route=='panel.user.add')?'active':'' }}">
                         <i class="bi bi-circle"></i><span>Add User</span>
                     </a>
                 </li>
             </ul>
         </li>
         <!-- logo sections  -->
-        <li class="nav-item">
+        <li class="nav-item has-treeview {{ ($prefix=='/logo')?'menu-open': '' }}">
             <a class="nav-link collapsed" data-bs-target="#logos-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-image-alt"></i><span>Logo Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="logos-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{route('panel.logo.view')}}">
+                    <a href="{{route('panel.logo.view')}}" class="nav-link {{ ($route=='panel.logo.view')?'active':'' }}">
                         <i class="bi bi-circle"></i><span>View Logo</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.logo.add')}}">
+                    <a href="{{route('panel.logo.add')}}" class="nav-link {{ ($route=='panel.logo.add')?'active':'' }}">
                         <i class="bi bi-circle"></i><span>Add Logo</span>
                     </a>
                 </li>

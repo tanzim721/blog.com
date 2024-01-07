@@ -34,6 +34,7 @@ use App\Http\Controllers\FactoryEvaluationListController;
 |
 */
 
+
 Route::get('/', [HomeController::class, 'home'])->name('home1');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
