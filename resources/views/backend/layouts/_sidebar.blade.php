@@ -229,6 +229,13 @@
                     </a>
                 </li>
             </ul>
+            <ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.supplier_identifiers.view')}}">
+                        <i class="bi bi-circle"></i><span>Supplier Identifier</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         
     </ul>

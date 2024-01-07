@@ -64,6 +64,6 @@ class PartnerController extends Controller
             unlink('upload/partner_images/' . $data->image);
         }
         $data->delete();
-        return redirect()->route('panel.partners.view')->with('success', 'Partner successfully deleted.');
+        return redirect()->route('panel.partners.view')->with('error', 'Partner successfully deleted.');
     }
 }

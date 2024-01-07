@@ -23,7 +23,7 @@ class MerchandisingListController extends Controller
         return view('backend.merchandisinglist.view', $data);
     }
     public function add(){
-        return view('backend.merchandisinglist.add');
+        return view('backend.merchandisinglist.add');       
     }
     public function store(Request $request){
         $data = new MerchandisingList();

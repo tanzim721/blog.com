@@ -19,6 +19,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\QualityController;
 use App\Http\Controllers\MerchandisingController;
 use App\Http\Controllers\MerchandisingListController;
+use App\Http\Controllers\SupplierIdentifierController;
 
 
 /*
@@ -173,6 +174,16 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [MerchandisingListController::class, 'update'])->name('panel.merchandisinglist.update');
         Route::get('/delete/{id}', [MerchandisingListController::class, 'delete'])->name('panel.merchandisinglist.delete');
     });
+    // Supplier Identifier list.................
+    Route::prefix('supplier_identifiers')->group(function(){
+        Route::get('/view', [SupplierIdentifierController::class, 'view'])->name('panel.supplier_identifiers.view');
+        Route::get('/add', [SupplierIdentifierController::class, 'add'])->name('panel.supplier_identifiers.add');
+        Route::post('/store', [SupplierIdentifierController::class, 'store'])->name('panel.supplier_identifiers.store');
+        Route::get('/edit/{id}', [SupplierIdentifierController::class, 'edit'])->name('panel.supplier_identifiers.edit');
+        Route::post('/update/{id}', [SupplierIdentifierController::class, 'update'])->name('panel.supplier_identifiers.update');
+        Route::get('/delete/{id}', [SupplierIdentifierController::class, 'delete'])->name('panel.supplier_identifiers.delete');
+    });
+
 
 
 });
