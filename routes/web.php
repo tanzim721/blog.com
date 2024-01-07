@@ -21,9 +21,8 @@ use App\Http\Controllers\MerchandisingController;
 use App\Http\Controllers\MerchandisingListController;
 use App\Http\Controllers\SupplierIdentifierController;
 use App\Http\Controllers\CompititivePricingController;
-
-
-
+use App\Http\Controllers\FactoryEvaluationController;
+use App\Http\Controllers\FactoryEvaluationListController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -194,8 +193,24 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [CompititivePricingController::class, 'update'])->name('panel.compititive_pricings.update');
         Route::get('/delete/{id}', [CompititivePricingController::class, 'delete'])->name('panel.compititive_pricings.delete');
     });
-
-
+    // factory_evaluations
+    Route::prefix('factory_evaluations')->group(function(){
+        Route::get('/view', [FactoryEvaluationController::class, 'view'])->name('panel.factory_evaluations.view');
+        Route::get('/add', [FactoryEvaluationController::class, 'add'])->name('panel.factory_evaluations.add');
+        Route::post('/store', [FactoryEvaluationController::class, 'store'])->name('panel.factory_evaluations.store');
+        Route::get('/edit/{id}', [FactoryEvaluationController::class, 'edit'])->name('panel.factory_evaluations.edit');
+        Route::post('/update/{id}', [FactoryEvaluationController::class, 'update'])->name('panel.factory_evaluations.update');
+        Route::get('/delete/{id}', [FactoryEvaluationController::class, 'delete'])->name('panel.factory_evaluations.delete');
+    });
+    // factory_evaluations_list
+    Route::prefix('factory_evaluations_list')->group(function(){
+        Route::get('/view', [FactoryEvaluationListController::class, 'view'])->name('panel.factory_evaluations_list.view');
+        Route::get('/add', [FactoryEvaluationListController::class, 'add'])->name('panel.factory_evaluations_list.add');
+        Route::post('/store', [FactoryEvaluationListController::class, 'store'])->name('panel.factory_evaluations_list.store');
+        Route::get('/edit/{id}', [FactoryEvaluationListController::class, 'edit'])->name('panel.factory_evaluations_list.edit');
+        Route::post('/update/{id}', [FactoryEvaluationListController::class, 'update'])->name('panel.factory_evaluations_list.update');
+        Route::get('/delete/{id}', [FactoryEvaluationListController::class, 'delete'])->name('panel.factory_evaluations_list.delete');
+    });
 
 });
 

@@ -243,7 +243,21 @@
                     </a>
                 </li>
             </ul>
-            
+            <!-- Factory Evaluation-->
+            <ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.factory_evaluations.view')}}">
+                        <i class="bi bi-circle"></i><span>Factory Evaluation</span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.factory_evaluations_list.view')}}">
+                        <i class="bi bi-circle"></i><span>Factory Evaluation list</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         
     </ul>
