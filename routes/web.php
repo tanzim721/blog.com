@@ -146,7 +146,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [AboutController::class, 'update'])->name('panel.abouts.update');
         Route::get('/delete/{id}', [AboutController::class, 'delete'])->name('panel.abouts.delete');
     });
-
+    //about list controller section.........
+    Route::prefix('about_lists')->group(function(){
+        Route::get('/view', [AboutListController::class, 'view'])->name('panel.about_lists.view');
+        Route::get('/add', [AboutListController::class, 'add'])->name('panel.about_lists.add');
+        Route::post('/store', [AboutListController::class, 'store'])->name('panel.about_lists.store');
+        Route::get('/edit/{id}', [AboutListController::class, 'edit'])->name('panel.about_lists.edit');
+        Route::post('/update/{id}', [AboutListController::class, 'update'])->name('panel.about_lists.update');
+        Route::get('/delete/{id}', [AboutListController::class, 'delete'])->name('panel.about_lists.delete');
+    });
     // Partner Controller.............
     Route::prefix('partners')->group(function(){
         Route::get('/view', [PartnerController::class, 'view'])->name('panel.partners.view');
@@ -242,15 +250,7 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [FactoryEvaluationListController::class, 'update'])->name('panel.factory_evaluations_list.update');
         Route::get('/delete/{id}', [FactoryEvaluationListController::class, 'delete'])->name('panel.factory_evaluations_list.delete');
     });
-    //about list controller section.........
-    Route::prefix('about_lists')->group(function(){
-        Route::get('/view', [AboutListController::class, 'view'])->name('panel.about_lists.view');
-        Route::get('/add', [AboutListController::class, 'add'])->name('panel.about_lists.add');
-        Route::post('/store', [AboutListController::class, 'store'])->name('panel.about_lists.store');
-        Route::get('/edit/{id}', [AboutListController::class, 'edit'])->name('panel.about_lists.edit');
-        Route::post('/update/{id}', [AboutListController::class, 'update'])->name('panel.about_lists.update');
-        Route::get('/delete/{id}', [AboutListController::class, 'delete'])->name('panel.about_lists.delete');
-    });
+    
 
 });
 

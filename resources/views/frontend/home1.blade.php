@@ -30,21 +30,51 @@
     </div>
     <!-- End Slider -->
     <div class="container">
-        <h2 class="text-center p-3 noo-sh-title-top text-danger"><strong>About US</strong></h2>
-        @foreach($abouts as $about)
+        <h1 class="text-center p-4 noo-sh-title-top text-danger"><strong>About US</strong></h1>
         <div class="row">
+            @foreach($abouts as $about)
             <div class="col-lg-6">
-                <div class="banner-frame"> <img class="img-fluid" src="{{asset('upload/about_images/'.$about->image)}}" alt="" /></div>
+                <div class="shop-cat-box">      
+                    <img class="img-fluid" src="{{asset('upload/about_images/'.$about->image)}}" alt="" />
+                </div>
             </div>
             <div class="col-lg-6">
-                <h2 class="noo-sh-title-top">{{$about->short_title}}</h2>
-                <h3>{{$about->long_title}}</h3>
-                <a class="btn hvr-hover" href="#">Read More</a>
+                <h1 class="noo-sh-title-top">{{$about->short_title}}</h1>
+                <h2>{{$about->long_title}}</h2>
+                @foreach($about_lists as $about_list)
+                <div>
+                    <ul>
+                        <li><strong><span style="color:red; width:10px;">-</span> {{$about_list->short_title}}</strong></li>
+                    </ul>
+                </div>
+                @endforeach
                 <h4 class="text-right"><strong>{{$about->ceo_name}}</strong></h4>
                 <h4 class="text-right"><strong>(CEO and Founder)</strong></h4>
             </div>
+            @endforeach
         </div>
-        @endforeach
+    </div>
+    <div class="container">
+    <div class="row my-5">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>We are Trusted</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>We are Professional</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>We are Expert</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
     </div>
     <!-- Start Categories  -->
     <div class="categories-shop">

@@ -64,19 +64,29 @@
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
                             <h4>Contact Us</h4>
+                            @foreach($contacts as $contact)
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: {{$contact->address}}</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">{{$contact->mobile_no}}</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">{{$contact->email}}</a></p>
                                 </li>
                             </ul>
+                            @endforeach
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="container text-center color-white">
+                <div class="copyright">
+                    &copy; {{date('Y')}} Copyright <strong><span>S&J BD Limited</span></strong>, All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://tanzim36.xyz/">Tanzimul Islam</a>
                 </div>
             </div>
         </div>

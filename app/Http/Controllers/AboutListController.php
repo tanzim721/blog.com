@@ -31,7 +31,7 @@ class AboutListController extends Controller
         $data->short_title = $request->short_title;
         $data->created_by = Auth::user()->id;
         $data->save(); 
-        return redirect()->route('panel.about_lists.view')->with('success', "Factory Evaluation Successfully Stored.");
+        return redirect()->route('panel.about_lists.view')->with('success', "About List Successfully Stored.");
     }
     public function edit($id){
         $editData = AboutList::find($id);
@@ -42,11 +42,11 @@ class AboutListController extends Controller
         $data->short_title = $request->short_title;
         $data->updated_by = Auth::user()->id;
         $data->save(); 
-        return redirect()->route('panel.about_lists.view')->with('success', "Factory Evaluation Successfully Updated.");
+        return redirect()->route('panel.about_lists.view')->with('success', "About List Successfully Updated.");
     }
     public function delete($id){
         $data = AboutList::find($id);
         $data->delete();
-        return redirect()->route('panel.about_lists.view')->with('error', 'Factory Evaluation successfully deleted.');
+        return redirect()->route('panel.about_lists.view')->with('error', 'About List successfully deleted.');
     }
 }

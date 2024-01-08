@@ -8,6 +8,8 @@ use App\Models\Logo;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\About;
+use App\Models\AboutList;
+use App\Models\Contact;
 use App\Models\Partner;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
@@ -22,7 +24,9 @@ class FrontendController extends Controller
         $data['logo'] = Logo::first();
         $data['sliders'] = Slider::all();
         $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
         $data['partners'] = Partner::all();
+        $data['contacts'] = Contact::all();
         return view('frontend.home1', $data);
     }
 }
