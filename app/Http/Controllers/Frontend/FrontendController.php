@@ -23,6 +23,6 @@ class FrontendController extends Controller
         $data['sliders'] = Slider::all();
         $data['abouts'] = About::all();
         $data['partners'] = Partner::all();
-        return view('home1', $data);
+        return view('frontend.home1', $data);
     }
 }

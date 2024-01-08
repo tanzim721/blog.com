@@ -39,11 +39,11 @@
 
   <body>
 
-    @include('layouts1.header')
+    @include('frontend.layouts1.header')
 
     @yield('content')
 
-    @include('layouts1.footer')
+    @include('frontend.layouts1.footer')
 
 
     <!-- Back to Top -->
