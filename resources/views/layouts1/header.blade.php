@@ -14,14 +14,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="login-box">
-                        <div class="our-link">
-                            <ul>
-                                <li><a href="{{url('register')}}"><i class="fa fa-user s_color"></i> Sign up </a></li>
-                                <li><a href="{{url('login')}}"><i class="fas fa-location-arrow"></i> Sign in </a></li>
-                            </ul>
-                        </div>
-						
+                    <div class="login-box">
+                        <a href="{{url('login')}}" class="text-white">Sign In</a>
+                        <br>
+                        <a href="{{url('register')}}" class="text-white">Register Here</a>
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
@@ -67,19 +63,22 @@
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
+                        <i class="fa fa-bars"></i>
+                    </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
+                    <a href="" class="logo d-flex w-auto">
+                        <img src="{{url('upload/logo_images/',$logo->logo)}}" alt="">
+                    </a>
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                        <li classs="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP </a>
                             <ul class="dropdown-menu">
 								<li><a href="shop.html">Sidebar Shop</a></li>
 								<li><a href="shop-detail.html">Shop Detail</a></li>

@@ -14,12 +14,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-
+ 
     <!-- Site Icons -->
     <!-- <link rel="icon" href="https://www.sjbdltd.com/wp-content/themes/samijannat/assets/images/favicon.html" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="https://www.sjbdltd.com/wp-content/themes/samijannat/assets/images/favicon.png" /> -->
-    <link rel="icon" href="{{asset('frontend/images/title_logo.png')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('frontend/images/title_logo.png')}}">
+    <link href="{{asset('assets/img/logo-white-1.png')}}" rel="icon">
+    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
@@ -29,8 +29,12 @@
     <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
-    @yield('style')
+    <!-- font-awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    
+    @yield('style')
+    
   </head>
 
   <body>

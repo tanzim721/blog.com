@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('/assets/img/favicon.png')}}" rel="icon">
-  <link href="{{asset('/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{asset('assets/img/logo-white-1.png')}}" rel="icon">
+  <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -34,7 +34,6 @@
 
   <main>
     <div class="container">
-
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
@@ -42,8 +41,8 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="{{ asset('/assets/img/logo.png') }}" alt="">
-                  <span class="d-none d-lg-block">Blog</span>
+                  <img src="{{ asset('/assets/img/logo-white-1.png') }}" alt="">
+                  <span class="d-none d-lg-block">Registration Form</span>
                 </a>
               </div>
 

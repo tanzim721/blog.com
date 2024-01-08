@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
@@ -35,7 +36,7 @@ use App\Http\Controllers\FactoryEvaluationListController;
 */
 
 
-Route::get('/', [HomeController::class, 'home'])->name('home1');
+Route::get('/', [FrontendController::class, 'home'])->name('home1');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');

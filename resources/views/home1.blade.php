@@ -8,42 +8,20 @@
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
+            @foreach($sliders as $slider)
             <li class="text-center">
-                <img src="{{asset('frontend/images/banner-01.jpg')}}" alt="">
+                <img src="{{asset('upload/slider_images/'.$slider->image)}}" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                            <h1 class="m-b-20" style="text-transform:uppercase;"><strong>{{$slider->short_title}}</strong></h1>
+                            <p class="m-b-40">{{$slider->long_title}}</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="text-center">
-                <img src="{{asset('frontend/images/banner-02.jpg')}}" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="text-center">
-                <img src="{{asset('frontend/images/banner-03.jpg')}}" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            @endforeach
         </ul>
         <div class="slides-navigation">
             <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -51,13 +29,29 @@
         </div>
     </div>
     <!-- End Slider -->
-
+    <div class="container">
+        <h2 class="text-center p-3 noo-sh-title-top text-danger"><strong>About US</strong></h2>
+        @foreach($abouts as $about)
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="banner-frame"> <img class="img-fluid" src="{{asset('upload/about_images/'.$about->image)}}" alt="" /></div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title-top">{{$about->short_title}}</h2>
+                <h3>{{$about->long_title}}</h3>
+                <a class="btn hvr-hover" href="#">Read More</a>
+                <h4 class="text-right"><strong>{{$about->ceo_name}}</strong></h4>
+                <h4 class="text-right"><strong>(CEO and Founder)</strong></h4>
+            </div>
+        </div>
+        @endforeach
+    </div>
     <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
+                    <div class="shop-cat-box">      
                         <img class="img-fluid" src="{{asset('frontend/images/categories_img_01.jpg')}}" alt="" />
                         <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
                     </div>
@@ -291,86 +285,17 @@
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
+            @foreach($partners as $partner)
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-01.jpg')}}" alt="" />
+                    <img src="{{asset('upload/partner_images/'.$partner->image)}}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
+                    <p class="text-center text-white"><strong>{{$partner->short_title}}</strong></p>
                 </div>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-02.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-03.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-04.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-05.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-06.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-07.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-08.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-09.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('frontend/images/instagram-img-05.jpg')}}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <!-- End Instagram Feed  -->
