@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h1 class="noo-sh-title-top">{{$about->short_title}}</h1>
+                <h1 class="noo-sh-title-top">Welcome to {{$about->short_title}}</h1>
                 <h2>{{$about->long_title}}</h2>
                 @foreach($about_lists as $about_list)
                 <div>
