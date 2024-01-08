@@ -6,7 +6,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('panel.dashboard')}}">Home</a></li>
-                <li class="breadcrumb-item">Edit Factory Evaluation</li>
+                <li class="breadcrumb-item">Add About</li>
             </ol>
         </nav>
     </div>
@@ -17,19 +17,20 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            Edit Factory Evaluation
-                            <a class="btn btn-success btn-sm" href="{{route('panel.factory_evaluations_list.view')}}" style="float:right;"><i class="bi bi-list"></i> Factory Evaluation list</a>
+                            View About
+                            <a class="btn btn-success btn-sm" href="{{route('panel.about_lists.view')}}" style="float:right;"><i class="bi bi-list"></i>About list</a>
                         </h5>
                         <br>
                         <!-- Vertical Form -->
-                        <form class="row g-3" action="{{route('panel.factory_evaluations_list.update',$editData->id)}}" method="post" id="myForm" enctype="multipart/form-data">
+                        <form class="row g-3" action="{{route('panel.about_lists.store')}}" method="post" id="myForm" enctype="multipart/form-data">
                             {{ csrf_field() }}
+                            <div class="cl-12">
                             <div class="col-12">
                                 <label for="short_title" class="form-label">Short Title</label>
-                                <input type="text" value="{{$editData->short_title}}"  name="short_title" class="form-control" id="short_title">
+                                <input type="text" value=""  name="short_title" class="form-control" id="short_title">
                             </div>
                             <div class="col-12 pt-3">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -37,7 +38,6 @@
             </div>
         </div>
     </section>
-
 @endsection
 
 @section('script')

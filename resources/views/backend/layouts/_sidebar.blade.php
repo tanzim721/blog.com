@@ -148,12 +148,12 @@
             <ul id="about-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('panel.abouts.view')}}">
-                        <i class="bi bi-circle"></i><span>View About</span>
+                        <i class="bi bi-circle"></i><span>About section</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.abouts.add')}}">
-                        <i class="bi bi-circle"></i><span>Add About</span>
+                    <a href="{{route('panel.about_lists.view')}}">
+                        <i class="bi bi-circle"></i><span>About List</span>
              
                     </a>
                 </li>

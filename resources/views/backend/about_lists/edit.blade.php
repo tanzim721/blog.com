@@ -6,7 +6,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('panel.dashboard')}}">Home</a></li>
-                <li class="breadcrumb-item">Edit Factory Evaluation</li>
+                <li class="breadcrumb-item">Edit About</li>
             </ol>
         </nav>
     </div>
@@ -17,12 +17,12 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            Edit Factory Evaluation
-                            <a class="btn btn-success btn-sm" href="{{route('panel.factory_evaluations_list.view')}}" style="float:right;"><i class="bi bi-list"></i> Factory Evaluation list</a>
+                            Edit About
+                            <a class="btn btn-success btn-sm" href="{{route('panel.about_lists.view')}}" style="float:right;"><i class="bi bi-list"></i> About list</a>
                         </h5>
                         <br>
                         <!-- Vertical Form -->
-                        <form class="row g-3" action="{{route('panel.factory_evaluations_list.update',$editData->id)}}" method="post" id="myForm" enctype="multipart/form-data">
+                        <form class="row g-3" action="{{route('panel.about_lists.update',$editData->id)}}" method="post" id="myForm" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="col-12">
                                 <label for="short_title" class="form-label">Short Title</label>

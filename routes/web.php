@@ -24,6 +24,7 @@ use App\Http\Controllers\SupplierIdentifierController;
 use App\Http\Controllers\CompititivePricingController;
 use App\Http\Controllers\FactoryEvaluationController;
 use App\Http\Controllers\FactoryEvaluationListController;
+use App\Http\Controllers\AboutListController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -240,6 +241,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [FactoryEvaluationListController::class, 'edit'])->name('panel.factory_evaluations_list.edit');
         Route::post('/update/{id}', [FactoryEvaluationListController::class, 'update'])->name('panel.factory_evaluations_list.update');
         Route::get('/delete/{id}', [FactoryEvaluationListController::class, 'delete'])->name('panel.factory_evaluations_list.delete');
+    });
+    //about list controller section.........
+    Route::prefix('about_lists')->group(function(){
+        Route::get('/view', [AboutListController::class, 'view'])->name('panel.about_lists.view');
+        Route::get('/add', [AboutListController::class, 'add'])->name('panel.about_lists.add');
+        Route::post('/store', [AboutListController::class, 'store'])->name('panel.about_lists.store');
+        Route::get('/edit/{id}', [AboutListController::class, 'edit'])->name('panel.about_lists.edit');
+        Route::post('/update/{id}', [AboutListController::class, 'update'])->name('panel.about_lists.update');
+        Route::get('/delete/{id}', [AboutListController::class, 'delete'])->name('panel.about_lists.delete');
     });
 
 });
