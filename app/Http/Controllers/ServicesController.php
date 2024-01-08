@@ -16,6 +16,7 @@ use Auth;
 class ServicesController extends Controller
 {
     public function view(){
+        $data['countService'] = Service::count();
         $data['allData'] = Service::all();
         return view('backend.service.view', $data);
     }

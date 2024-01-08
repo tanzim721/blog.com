@@ -45,7 +45,7 @@
                     <h5 class="card-title text-center pb-0 fs-4">Password</h5>
                     <p class="text-center small">Enter your email to forgot password</p>
                   </div>
-                  @include('layouts._message')
+                  @include('frontend.layouts._message')
                   <form class="row g-3 needs-validation" action="" method="post">
                     {{ csrf_field() }}
                     <div class="col-12">

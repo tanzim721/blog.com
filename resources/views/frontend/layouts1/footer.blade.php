@@ -6,9 +6,11 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
                         <h3>Business Time</h3>
+                        @foreach($times as $time)
                         <ul class="list-time">
-                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            <li>{{$time->short_title}}: {{$time->time}}</li> 
                         </ul>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">

@@ -21,32 +21,13 @@
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
+                            @foreach($times as $time)    
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Vegetables
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now 
+                                    <i class="fab fa-opencart"></i>{{$time->short_title}}: {{$time->time}}
                                 </li>
                             </ul>
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ use App\Models\Slider;
 use App\Models\About;
 use App\Models\AboutList;
 use App\Models\Contact;
+use App\Models\BusinessTime;
 use App\Models\Partner;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
@@ -27,6 +28,7 @@ class FrontendController extends Controller
         $data['about_lists'] = AboutList::all();
         $data['partners'] = Partner::all();
         $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
         return view('frontend.home1', $data);
     }
 }
