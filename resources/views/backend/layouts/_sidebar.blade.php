@@ -264,6 +264,24 @@
                 </li>
             </ul>
         </li>
+        <!-- Business time section ............ -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#business-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-calendar-plus"></i><span>Business Time</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="business-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.business_times.view')}}">
+                        <i class="bi bi-circle"></i><span>View Time</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.business_times.add')}}">
+                        <i class="bi bi-circle"></i><span>Add Time</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
         
     </ul>
     

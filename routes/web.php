@@ -25,6 +25,8 @@ use App\Http\Controllers\CompititivePricingController;
 use App\Http\Controllers\FactoryEvaluationController;
 use App\Http\Controllers\FactoryEvaluationListController;
 use App\Http\Controllers\AboutListController;
+use App\Http\Controllers\BusinessTimeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -250,7 +252,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [FactoryEvaluationListController::class, 'update'])->name('panel.factory_evaluations_list.update');
         Route::get('/delete/{id}', [FactoryEvaluationListController::class, 'delete'])->name('panel.factory_evaluations_list.delete');
     });
-    
+    // Business Time controller ........
+    Route::prefix('business_times')->group(function(){
+        Route::get('/view', [BusinessTimeController::class, 'view'])->name('panel.business_times.view');
+        Route::get('/add', [BusinessTimeController::class, 'add'])->name('panel.business_times.add');
+        Route::post('/store', [BusinessTimeController::class, 'store'])->name('panel.business_times.store');
+        Route::get('/edit/{id}', [BusinessTimeController::class, 'edit'])->name('panel.business_times.edit');
+        Route::post('/update/{id}', [BusinessTimeController::class, 'update'])->name('panel.business_times.update');
+        Route::get('/delete/{id}', [BusinessTimeController::class, 'delete'])->name('panel.business_times.delete');
+    });
 
 });
 
