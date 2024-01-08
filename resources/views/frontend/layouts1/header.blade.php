@@ -21,13 +21,15 @@
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
-                            @foreach($times as $time)    
+                             
                             <ul class="offer-box">
+                                @foreach($times as $time)   
                                 <li>
                                     <i class="fab fa-opencart"></i>{{$time->short_title}}: {{$time->time}}
                                 </li>
+                                @endforeach
                             </ul>
-                            @endforeach
+                            
                         </div>
                     </div>
                 </div>

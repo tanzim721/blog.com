@@ -55,26 +55,26 @@
         </div>
     </div>
     <div class="container">
-    <div class="row my-5">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Trusted</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
+        <h2 class="text-danger text-center"><strong>We Maintain Quality</strong></h2> 
+        <h1 class="text-danger text-center"><strong>We Provide Quality Products For You</strong></h1>
+        <div class="row my-5">
+            <div class="col-sm-12 col-lg-6">
+                @foreach($missions as $mission)
+                <div class="service-block-inner">
+                    <h2 class="text-center"><strong>Our Mission</strong> </h2>
+                    <p>{{$mission->title}}</p>
                 </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Professional</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Expert</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
+            <div class="col-sm-12 col-lg-6">
+                @foreach($visions as $vision)
+                <div class="service-block-inner">
+                    <h2 class="text-center"><strong>Our Vision</strong> </h2>
+                    <p>{{$vision->title}}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
     <!-- Start Categories  -->
     <div class="categories-shop">
