@@ -28,6 +28,7 @@ use App\Http\Controllers\AboutListController;
 use App\Http\Controllers\BusinessTimeController;
 use App\Http\Controllers\ServiceListController;
 use App\Http\Controllers\ServiceOfferController;
+use App\Http\Controllers\ServiceOfferListController;
 
 
 /*
@@ -283,7 +284,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [ServiceOfferController::class, 'update'])->name('panel.service_offers.update');
         Route::get('/delete/{id}', [ServiceOfferController::class, 'delete'])->name('panel.service_offers.delete');
     });
-
+    // Service Offer Controller.............
+    Route::prefix('service_offer_lists')->group(function(){
+        Route::get('/view', [ServiceOfferListController::class, 'view'])->name('panel.service_offer_lists.view');
+        Route::get('/add', [ServiceOfferListController::class, 'add'])->name('panel.service_offer_lists.add');
+        Route::post('/store', [ServiceOfferListController::class, 'store'])->name('panel.service_offer_lists.store');
+        Route::get('/edit/{id}', [ServiceOfferListController::class, 'edit'])->name('panel.service_offer_lists.edit');
+        Route::post('/update/{id}', [ServiceOfferListController::class, 'update'])->name('panel.service_offer_lists.update');
+        Route::get('/delete/{id}', [ServiceOfferListController::class, 'delete'])->name('panel.service_offer_lists.delete');
+    });
     
 
 });

@@ -227,7 +227,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.service_offers.view')}}">
+                    <a href="{{route('panel.service_offer_lists.view')}}">
                         <i class="bi bi-circle"></i><span>Service list</span>
                     </a>
                 </li>
