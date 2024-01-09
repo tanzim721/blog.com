@@ -20,6 +20,8 @@ use App\Models\ServiceOffer;
 use App\Models\ServiceOfferList;
 use App\Models\SupplierIdentifier;
 use App\Models\CompititivePricing;
+use App\Models\FactoryEvaluation;
+use App\Models\PartnerOne;
 
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
@@ -56,9 +58,47 @@ class FrontendController extends Controller
         $data['visions'] = Vision::all();
         $data['missions'] = Mission::all();
         $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
 
         $data['abouts'] = About::all();
         $data['about_lists'] = AboutList::all();
         return view('frontend.about.view', $data);
+    }
+    public function why_choose_us(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+
+        $data['partners'] = Partner::all();
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['partnerones'] = PartnerOne::all();
+        return view('frontend.about.choose', $data);
+    }
+    public function team(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['visions'] = Vision::all();
+        $data['missions'] = Mission::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        
+        return view('frontend.about.team', $data);
     }
 }

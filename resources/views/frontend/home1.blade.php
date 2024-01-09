@@ -112,7 +112,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
                     @foreach($services as $service)
-					<div class="offer-box-products">
+					<div class="offer-box-products" style="border:20px solid #b0b54d;">
 						<img class="img-fluid" style="width:100%;" src="{{asset('upload/service_images/'.$service->image)}}" alt="" />
 					</div>
                     @endforeach    

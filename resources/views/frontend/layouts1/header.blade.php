@@ -65,8 +65,8 @@
                             <ul class="dropdown-menu p-3" style="background-color:#b0b54d;">
                                 <strong>
                                     <li><a class="btn hvr-hover" href="{{route('about')}}">About</a></li>
-                                    <li><a class="btn hvr-hover" href="">Why Choose Us</a></li>
-                                    <li><a class="btn hvr-hover" href="wishlist.html">Wishlist</a></li>
+                                    <li><a class="btn hvr-hover" href="{{route('why_choose_us')}}">Why Choose Us</a></li>
+                                    <li><a class="btn hvr-hover" href="{{route('team')}}">Team</a></li>
                                 </strong>
 								
                             </ul>

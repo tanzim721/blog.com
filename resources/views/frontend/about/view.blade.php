@@ -11,10 +11,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>About</h2>
+                    <h2><strong>About</strong></h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
-                        <li class="breadcrumb-item active">About Us</li>
+                        <strong>
+                            <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
+                            <li class="breadcrumb-item active">About Us</li>
+                        </strong>
                     </ul>
                 </div>
             </div>
@@ -70,14 +72,14 @@
     </div>
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
-            @foreach($partners as $partner)
+            @foreach($partnerones as $partnerone)
             <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{{asset('upload/partner_images/'.$partner->image)}}" alt="" />
+                <div class="ins-inner-box p-2">
+                    <img src="{{asset('upload/partner_one_images/'.$partnerone->image)}}" alt="" style="width:150px; height:150px; padding-left:60px;">
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-studiovinari"></i></a>
                     </div>
-                    <p class="text-center text-white"><strong>{{$partner->short_title}}</strong></p>
+                    <!-- <p class="text-center text-white"><strong>{{$partnerone->short_title}}</strong></p> -->
                 </div>
             </div>
             @endforeach
