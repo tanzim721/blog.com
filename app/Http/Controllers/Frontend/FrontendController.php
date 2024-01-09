@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Logo;
 use App\Models\Service;
+use App\Models\ServiceList;
 use App\Models\Slider;
 use App\Models\About;
 use App\Models\AboutList;
@@ -33,6 +34,8 @@ class FrontendController extends Controller
         $data['visions'] = Vision::all();
         $data['missions'] = Mission::all();
         $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
         return view('frontend.home1', $data);
     }
 }

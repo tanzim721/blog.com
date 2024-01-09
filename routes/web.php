@@ -27,6 +27,7 @@ use App\Http\Controllers\FactoryEvaluationListController;
 use App\Http\Controllers\AboutListController;
 use App\Http\Controllers\BusinessTimeController;
 use App\Http\Controllers\ServiceListController;
+use App\Http\Controllers\ServiceOfferController;
 
 
 /*
@@ -188,7 +189,7 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [ServicesController::class, 'update'])->name('panel.services.update');
         Route::get('/delete/{id}', [ServicesController::class, 'delete'])->name('panel.services.delete');
     });
-    // service_lists controller ........
+    // Service Lists controller ........
     Route::prefix('service_lists')->group(function(){
         Route::get('/view', [ServiceListController::class, 'view'])->name('panel.service_lists.view');
         Route::get('/add', [ServiceListController::class, 'add'])->name('panel.service_lists.add');
@@ -272,6 +273,18 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [BusinessTimeController::class, 'update'])->name('panel.business_times.update');
         Route::get('/delete/{id}', [BusinessTimeController::class, 'delete'])->name('panel.business_times.delete');
     });
+
+    // Service Offer Controller.............
+    Route::prefix('service_offers')->group(function(){
+        Route::get('/view', [ServiceOfferController::class, 'view'])->name('panel.service_offers.view');
+        Route::get('/add', [ServiceOfferController::class, 'add'])->name('panel.service_offers.add');
+        Route::post('/store', [ServiceOfferController::class, 'store'])->name('panel.service_offers.store');
+        Route::get('/edit/{id}', [ServiceOfferController::class, 'edit'])->name('panel.service_offers.edit');
+        Route::post('/update/{id}', [ServiceOfferController::class, 'update'])->name('panel.service_offers.update');
+        Route::get('/delete/{id}', [ServiceOfferController::class, 'delete'])->name('panel.service_offers.delete');
+    });
+
+    
 
 });
 

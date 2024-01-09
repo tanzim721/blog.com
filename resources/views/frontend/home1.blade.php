@@ -55,18 +55,18 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="text-danger text-center"><strong>We Maintain Quality</strong></h2> 
-        <h1 class="text-danger text-center"><strong>We Provide Quality Products For You</strong></h1>
+        <h2 class="text-danger text-center font-weight-bold"><strong>__________We Maintain Quality__________</strong></h2> 
+        <h1 class="text-danger text-center font-weight-bold"><strong>We Provide Quality Products For You</strong></h1>
         <div class="row my-5">
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-6 font-weight-bold">
                 @foreach($visions as $vision)
                 <div class="service-block-inner">
-                    <h2 class="text-center"><strong>Our Vision</strong> </h2>
+                    <h2 class="text-center"><strong>Our Vision</strong></h2>
                     <p>{{$vision->title}}</p>
                 </div>
                 @endforeach
             </div>
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-6 font-weight-bold">
                 @foreach($missions as $mission)
                 <div class="service-block-inner">
                     <h2 class="text-center"><strong>Our Mission</strong> </h2>
@@ -107,14 +107,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
+                    @foreach($services as $service)
 					<div class="offer-box-products">
-						<img class="img-fluid" src="{{asset('frontend/images/add-img-01.jpg')}}" alt="" />
+						<img class="img-fluid" style="width:100%;" src="{{asset('upload/service_images/'.$service->image)}}" alt="" />
 					</div>
+                    @endforeach    
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="offer-box-products">
-						<img class="img-fluid" src="{{asset('frontend/images/add-img-02.jpg')}}" alt="" />
+                
+				<div class="col-lg-6 col-md-6 col-sm-12 font-weight-bold">
+					<div class="offer-box-products p-3">
+                        <h2 class="text-danger"><strong>Why Choose Us_____</strong></h2>
+                        @foreach($services as $service)
+                        <h1><strong>{{$service->short_title}}</strong> </h1>
+                        <p class="text-justify">{{$service->long_title}}</p>
+                        @endforeach
+                        
 					</div>
+					<div class="offer-box-products p-3">
+                        @foreach($servicelists as $servicelist)
+			        		<div class="offer-box-products p-3">
+                                <ul>
+                                    <li><strong><span style="color:red; width:10px;">-</span> {{$servicelist->short_title}}</strong></li>
+                                </ul> 
+                            </div>        
+                        @endforeach
+                    </div>
 				</div>
 			</div>
 		</div>

@@ -215,6 +215,24 @@
                 </li>
             </ul>
         </li>
+        <!-- Service offer section  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#services-nav1" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-gem"></i><span>Service Offer</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="services-nav1" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.service_offers.view')}}">
+                        <i class="bi bi-circle"></i><span>Services offer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.service_offers.view')}}">
+                        <i class="bi bi-circle"></i><span>Service list</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
         <!-- Team section here m  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#">
