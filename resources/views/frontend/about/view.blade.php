@@ -4,7 +4,22 @@
 @endsection
 
 @section('content')
-   
+    
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>About</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
+                        <li class="breadcrumb-item active">About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <h1 class="text-center p-4 noo-sh-title-top text-danger"><strong>About US</strong></h1>
         <div class="row">
@@ -16,7 +31,6 @@
             </div>
             <div class="col-lg-6">
                 <h1 class="noo-sh-title-top">Welcome to {{$about->short_title}}</h1>
-                <h2>{{$about->long_title}}</h2>
                 @foreach($about_lists as $about_list)
                 <div>
                     <ul>
@@ -24,6 +38,8 @@
                     </ul>
                 </div>
                 @endforeach
+                <br>
+                <h2>{{$about->long_title}}</h2>
                 <h4 class="text-right"><strong>{{$about->ceo_name}}</strong></h4>
                 <h4 class="text-right"><strong>(CEO and Founder)</strong></h4>
             </div>

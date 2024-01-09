@@ -17,6 +17,7 @@ use App\Http\Controllers\NewsEventController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\PartnerOneController;
 use App\Http\Controllers\QualityController;
 use App\Http\Controllers\MerchandisingController;
 use App\Http\Controllers\MerchandisingListController;
@@ -171,8 +172,18 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [PartnerController::class, 'update'])->name('panel.partners.update');
         Route::get('/delete/{id}', [PartnerController::class, 'delete'])->name('panel.partners.delete');
     });
+    // Partner one Controller.............
+    Route::prefix('partner_ones')->group(function(){
+        Route::get('/view', [PartnerOneController::class, 'view'])->name('panel.partner_ones.view');
+        Route::get('/add', [PartnerOneController::class, 'add'])->name('panel.partner_ones.add');
+        Route::post('/store', [PartnerOneController::class, 'store'])->name('panel.partner_ones.store');
+        Route::get('/edit/{id}', [PartnerOneController::class, 'edit'])->name('panel.partner_ones.edit');
+        Route::post('/update/{id}', [PartnerOneController::class, 'update'])->name('panel.partner_ones.update');
+        Route::get('/delete/{id}', [PartnerOneController::class, 'delete'])->name('panel.partner_ones.delete');
+    });
 
-    // Partner Controller.............
+
+    // Quality Controller.............
     Route::prefix('qualitys')->group(function(){
         Route::get('/view', [QualityController::class, 'view'])->name('panel.qualitys.view');
         Route::get('/add', [QualityController::class, 'add'])->name('panel.qualitys.add');
@@ -181,6 +192,7 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [QualityController::class, 'update'])->name('panel.qualitys.update');
         Route::get('/delete/{id}', [QualityController::class, 'delete'])->name('panel.qualitys.delete');
     });
+    
 
     // Services controller ............
     Route::prefix('services')->group(function(){

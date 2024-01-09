@@ -62,10 +62,13 @@
                         <!-- <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li> -->
                         <li classs="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">About Us </a>
-                            <ul class="dropdown-menu">
-								<li><a href="{{route('about')}}">About</a></li>
-								<li><a href="">Why Choose Us</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
+                            <ul class="dropdown-menu p-3" style="background-color:#b0b54d;">
+                                <strong>
+                                    <li><a class="btn hvr-hover" href="{{route('about')}}">About</a></li>
+                                    <li><a class="btn hvr-hover" href="">Why Choose Us</a></li>
+                                    <li><a class="btn hvr-hover" href="wishlist.html">Wishlist</a></li>
+                                </strong>
+								
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="">Services</a></li>

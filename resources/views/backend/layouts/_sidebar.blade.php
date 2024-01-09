@@ -171,8 +171,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.partners.add')}}">
-                        <i class="bi bi-circle"></i><span>Add Partner</span>
+                    <a href="{{route('panel.partner_ones.view')}}">
+                        <i class="bi bi-circle"></i><span>Real estate partner</span>
              
                     </a>
                 </li>
