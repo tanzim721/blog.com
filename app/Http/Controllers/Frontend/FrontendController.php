@@ -49,4 +49,16 @@ class FrontendController extends Controller
         $data['compititivePricings'] = CompititivePricing::all();
         return view('frontend.home1', $data);
     }
+    public function about(){
+        $data['logo'] = Logo::first();
+        $data['times'] = BusinessTime::all();
+        $data['contacts'] = Contact::all();
+        $data['visions'] = Vision::all();
+        $data['missions'] = Mission::all();
+        $data['partners'] = Partner::all();
+
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        return view('frontend.about.view', $data);
+    }
 }

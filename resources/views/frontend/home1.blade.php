@@ -203,7 +203,6 @@
                                 <p class="text-light pt-5 px-2">{{$supplierIdentifier->long_title}}</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 @endforeach

@@ -44,6 +44,7 @@ use App\Http\Controllers\ServiceOfferListController;
 
 
 Route::get('/', [FrontendController::class, 'home'])->name('home1');
+Route::get('/about', [FrontendController::class, 'about'])->name('about');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');
