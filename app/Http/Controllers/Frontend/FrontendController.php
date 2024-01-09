@@ -15,6 +15,8 @@ use App\Models\Vision;
 use App\Models\Mission;
 use App\Models\BusinessTime;
 use App\Models\Partner;
+use App\Models\ServiceOffer;
+use App\Models\ServiceOfferList;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -36,6 +38,8 @@ class FrontendController extends Controller
         $data['times'] = BusinessTime::all();
         $data['services'] = Service::all();
         $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
         return view('frontend.home1', $data);
     }
 }
