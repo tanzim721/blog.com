@@ -15,8 +15,12 @@ use App\Models\Vision;
 use App\Models\Mission;
 use App\Models\BusinessTime;
 use App\Models\Partner;
+use App\Models\Merchandising;
 use App\Models\ServiceOffer;
 use App\Models\ServiceOfferList;
+use App\Models\SupplierIdentifier;
+use App\Models\CompititivePricing;
+
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -40,6 +44,9 @@ class FrontendController extends Controller
         $data['servicelists'] = ServiceList::all();
         $data['serviceoffers'] = ServiceOffer::all();
         $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
         return view('frontend.home1', $data);
     }
 }

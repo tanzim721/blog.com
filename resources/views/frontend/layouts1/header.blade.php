@@ -78,7 +78,7 @@
                 <!-- /.navbar-collapse -->
 
                 <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
+                <!-- <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu">
@@ -89,7 +89,7 @@
 							</a>
 						</li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- End Atribute Navigation -->
             </div>
             <!-- Start Side Menu -->
