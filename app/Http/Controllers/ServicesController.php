@@ -27,6 +27,12 @@ class ServicesController extends Controller
         $data = new Service();
         $data->short_title = $request->short_title;
         $data->long_title = $request->long_title;
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename=date('YMDHi').$file->getClientOriginalName();
+            $file->move(public_path('upload/service_images'),$filename);
+            $data['image']=$filename;
+        }
         $data->created_by = Auth::user()->id;
         $data->save(); 
         return redirect()->route('panel.services.view')->with('success', "Services Successfully Stored.");
@@ -37,6 +43,13 @@ class ServicesController extends Controller
     }
     public function update($id, Request $request){
         $data = Service::find($id);
+        if($request->file('image')){
+            $file = $request->file('image');
+            @unlink(public_path('upload/service_images'.$data->image));
+            $filename=date('YMDHi').$file->getClientOriginalName();
+            $file->move(public_path('upload/service_images'),$filename);
+            $data['image'] = $filename;
+        }
         $data->short_title = $request->short_title;
         $data->long_title = $request->long_title;
         $data->updated_by = Auth::user()->id;
@@ -45,6 +58,9 @@ class ServicesController extends Controller
     }
     public function delete($id){
         $data = Service::find($id);
+        if (file_exists('upload/service_images/' . $data->image) AND ! empty($data->image)) {
+            unlink('upload/service_images/' . $data->image);
+        }
         $data->delete();
         return redirect()->route('panel.services.view')->with('success', 'Service successfully deleted.');
     }

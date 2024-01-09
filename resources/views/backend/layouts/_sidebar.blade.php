@@ -200,7 +200,7 @@
         <!-- Services section  -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#services-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-gem"></i><span>Services Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-gem"></i><span>Services Solution</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="services-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>

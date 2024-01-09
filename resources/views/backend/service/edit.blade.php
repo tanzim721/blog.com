@@ -16,7 +16,7 @@
                         <!-- Vertical Form -->
                         <form class="row g-3" action="{{route('panel.services.update',$editData->id)}}" method="post" id="myForm" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            <!-- <div class="cl-12">
+                            <div class="cl-12">
                                 <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Image</label>
                                 <div class="col-md-8 col-lg-9">
                                     <img src="{{(!empty($editData->image))?url('upload/service_images/',$editData->image):asset('upload/no_image.png')}}" alt="Profile" id="showImage" style="height:160px; width:160px;">
@@ -24,7 +24,7 @@
                                         <input name="image" type="file" class="form-control" id="image" value="">
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="col-12">
                                 <label for="short_title" class="form-label">Short Title</label>
                                 <input type="text" value="{{$editData->short_title}}"  name="short_title" class="form-control" id="short_title">

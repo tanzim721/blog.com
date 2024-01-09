@@ -27,7 +27,7 @@
                         <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <!-- <th scope="col">Image</th> -->
+                            <th scope="col">Image</th>
                             <th scope="col">Short Title</th>
                             <th scope="col">Long Title</th>
                             <th scope="col" style="width:150px;">Action</th>
@@ -37,7 +37,7 @@
                             @foreach($allData as $key => $service)
                                 <tr>
                                     <td>{{$key+1}}</td>
-                                    <!-- <td><img src="{{(!empty($service->image))?url('upload/service_images/',$service->image):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td> -->
+                                    <td><img src="{{(!empty($service->image))?url('upload/service_images/',$service->image):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td>
                                     <td>{{$service->short_title}}</td>
                                     <td>{{$service->long_title}}</td>
                                     <td>
