@@ -20,10 +20,10 @@
                     <h5 class="card-title">
                         Users List
                         @if($countLogo < 1)
-                        <a href="{{route('panel.logo.add')}}" class="btn btn-primary" style="float:right">Add new</a>
+                        <a href="{{route('panel.logo.add')}}" class="btn btn-primary" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
                         @endif
                     </h5>
-                    <!-- Table with stripped rows -->
+                    <!-- Table with stripped rows --> 
                     <table class="table table-striped">
                         <thead>
                         <tr>

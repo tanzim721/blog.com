@@ -19,7 +19,7 @@
                     <h5 class="card-title">
                         Vision List
                         @if($countVision < 1)
-                            <a href="{{route('panel.visions.add')}}" class="btn btn-success" style="float:right">Add new</a>
+                            <a href="{{route('panel.visions.add')}}" class="btn btn-success" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
                         @endif
                     </h5>
                     <!-- Table with stripped rows -->

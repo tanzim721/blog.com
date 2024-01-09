@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         Sliders List
-                        <a href="{{route('panel.sliders.add')}}" class="btn btn-success" style="float:right">Add new</a>
+                        <a href="{{route('panel.sliders.add')}}" class="btn btn-success" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
                     </h5>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">

@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <h5 class="card-title">
                         News and Events List
-                        <a href="{{route('panel.news_events.add')}}" class="btn btn-success" style="float:right">Add new</a>
+                        <a href="{{route('panel.news_events.add')}}" class="btn btn-success" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
                     </h5>
                     <!-- Table with stripped rows -->
                     <table class="table table-striped">
