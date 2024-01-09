@@ -26,6 +26,8 @@ use App\Http\Controllers\FactoryEvaluationController;
 use App\Http\Controllers\FactoryEvaluationListController;
 use App\Http\Controllers\AboutListController;
 use App\Http\Controllers\BusinessTimeController;
+use App\Http\Controllers\ServiceListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -185,6 +187,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [ServicesController::class, 'edit'])->name('panel.services.edit');
         Route::post('/update/{id}', [ServicesController::class, 'update'])->name('panel.services.update');
         Route::get('/delete/{id}', [ServicesController::class, 'delete'])->name('panel.services.delete');
+    });
+    // service_lists controller ........
+    Route::prefix('service_lists')->group(function(){
+        Route::get('/view', [ServiceListController::class, 'view'])->name('panel.service_lists.view');
+        Route::get('/add', [ServiceListController::class, 'add'])->name('panel.service_lists.add');
+        Route::post('/store', [ServiceListController::class, 'store'])->name('panel.service_lists.store');
+        Route::get('/edit/{id}', [ServiceListController::class, 'edit'])->name('panel.service_lists.edit');
+        Route::post('/update/{id}', [ServiceListController::class, 'update'])->name('panel.service_lists.update');
+        Route::get('/delete/{id}', [ServiceListController::class, 'delete'])->name('panel.service_lists.delete');
     });
 
     // Category controller...........

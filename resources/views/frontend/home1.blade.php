@@ -59,18 +59,18 @@
         <h1 class="text-danger text-center"><strong>We Provide Quality Products For You</strong></h1>
         <div class="row my-5">
             <div class="col-sm-12 col-lg-6">
-                @foreach($missions as $mission)
-                <div class="service-block-inner">
-                    <h2 class="text-center"><strong>Our Mission</strong> </h2>
-                    <p>{{$mission->title}}</p>
-                </div>
-                @endforeach
-            </div>
-            <div class="col-sm-12 col-lg-6">
                 @foreach($visions as $vision)
                 <div class="service-block-inner">
                     <h2 class="text-center"><strong>Our Vision</strong> </h2>
                     <p>{{$vision->title}}</p>
+                </div>
+                @endforeach
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                @foreach($missions as $mission)
+                <div class="service-block-inner">
+                    <h2 class="text-center"><strong>Our Mission</strong> </h2>
+                    <p>{{$mission->title}}</p>
                 </div>
                 @endforeach
             </div>

@@ -205,12 +205,12 @@
             <ul id="services-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('panel.services.view')}}">
-                        <i class="bi bi-circle"></i><span>View Services</span>
+                        <i class="bi bi-circle"></i><span>Services</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.services.add')}}">
-                        <i class="bi bi-circle"></i><span>Add Services</span>
+                    <a href="{{route('panel.service_lists.view')}}">
+                        <i class="bi bi-circle"></i><span>Service list</span>
                     </a>
                 </li>
             </ul>
