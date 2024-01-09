@@ -16,6 +16,7 @@ use App\Models\Mission;
 use App\Models\BusinessTime;
 use App\Models\Partner;
 use App\Models\Merchandising;
+use App\Models\MerchandisingList;
 use App\Models\ServiceOffer;
 use App\Models\ServiceOfferList;
 use App\Models\SupplierIdentifier;
@@ -100,5 +101,28 @@ class FrontendController extends Controller
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         
         return view('frontend.about.team', $data);
+    }
+    public function merchandising(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['visions'] = Vision::all();
+        $data['missions'] = Mission::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        return view('frontend.about.merchandising.view', $data);
     }
 }

@@ -15,7 +15,7 @@
                     <ul class="breadcrumb">
                         <strong>
                             <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Why Choose Us</li>
+                            <li class="breadcrumb-item active">Team</li>
                         </strong>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
                             <img src="{{asset('upload/merchandising_images/'.$merchandising->image)}}" class="img-fluid" alt="Image" style="width:100%; height:300px">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="{{route('merchandising')}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
@@ -114,7 +114,7 @@
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb">
-                                <p class="new">Supplier Identifier</p>
+                                <p class="new">Factory Evaluation</p>
                             </div>
                             <img src="{{asset('upload/factory_evaluations_images/'.$factoryEvaluation->image)}}" class="img-fluid" alt="Image" style="width:100%; height:300px">
                             <div class="mask-icon">
