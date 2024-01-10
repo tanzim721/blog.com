@@ -22,6 +22,8 @@ use App\Models\ServiceOfferList;
 use App\Models\SupplierIdentifier;
 use App\Models\CompititivePricing;
 use App\Models\FactoryEvaluation;
+use App\Models\FactoryEvaluationList;
+
 use App\Models\PartnerOne;
 
 use App\Mail\RegisterMail;
@@ -170,5 +172,30 @@ class FrontendController extends Controller
         $data['compititivePricings'] = CompititivePricing::all();
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         return view('frontend.about.compititive_pricing.view', $data);
+    }
+    public function factory_evaluation(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['visions'] = Vision::all();
+        $data['missions'] = Mission::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+
+        return view('frontend.about.factory_evaluation.view', $data);
     }
 }
