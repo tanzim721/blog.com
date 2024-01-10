@@ -54,14 +54,14 @@
                     @foreach($factoryEvaluationLists as $factoryEvaluationList)
                     <div>
                         <ul>
-                            <li><strong><span style="color:red; width:10px;">-</span> {{$factoryEvaluationList->short_title}}</strong></li>
+                            <li><strong><span style="color:red; padding-left:15px;">-</span> {{$factoryEvaluationList->short_title}}</strong></li>
                         </ul>
                     </div>
                     @endforeach
-                    <h2>{{$factoryEvaluation->short_title}}</h2>
+                    <h2 class="pt-2">{{$factoryEvaluation->short_title}}</h2>
                 </div>
                 <div class="col-lg-12">
-                    <h2>{{$factoryEvaluation->long_title}}</h2>
+                    <h2 class="py-2">{{$factoryEvaluation->long_title}}</h2>
                 </div>
                 @endforeach
             </div>

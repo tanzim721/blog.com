@@ -54,6 +54,8 @@ class FrontendController extends Controller
         $data['compititivePricings'] = CompititivePricing::all();
         return view('frontend.home1', $data);
     }
+    
+    // started about section......... 
     public function about(){
         $data['logo'] = Logo::first();
         $data['times'] = BusinessTime::all();
@@ -67,6 +69,9 @@ class FrontendController extends Controller
         $data['about_lists'] = AboutList::all();
         return view('frontend.about.view', $data);
     }
+    // ended about section......... 
+
+    // start why choose us.............. 
     public function why_choose_us(){
         $data['logo'] = Logo::first();
         $data['sliders'] = Slider::all();
@@ -81,6 +86,9 @@ class FrontendController extends Controller
         $data['partnerones'] = PartnerOne::all();
         return view('frontend.about.choose', $data);
     }
+    // ended why choose us.............. 
+
+    // start team section ........
     public function team(){
         $data['logo'] = Logo::first();
         $data['sliders'] = Slider::all();
@@ -195,7 +203,10 @@ class FrontendController extends Controller
         $data['compititivePricings'] = CompititivePricing::all();
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
-
         return view('frontend.about.factory_evaluation.view', $data);
     }
+    // ended team section ........
+
+
+
 }
