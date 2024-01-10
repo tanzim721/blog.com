@@ -52,6 +52,7 @@ Route::get('/team/merchandising', [FrontendController::class, 'merchandising'])-
 Route::get('/team/supplier_identifier', [FrontendController::class, 'supplier_identifier'])->name('supplier_identifier');
 Route::get('/team/compititive_pricing', [FrontendController::class, 'compititive_pricing'])->name('compititive_pricing');
 Route::get('/team/factory_evaluation', [FrontendController::class, 'factory_evaluation'])->name('factory_evaluation');
+Route::get('/service', [FrontendController::class, 'service'])->name('service');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');
