@@ -165,7 +165,6 @@ class FrontendController extends Controller
         $data['about_lists'] = AboutList::all();
         $data['partners'] = Partner::all();
         $data['partnerones'] = PartnerOne::all();
-
         $data['contacts'] = Contact::all();
         $data['visions'] = Vision::all();
         $data['missions'] = Mission::all();
@@ -229,6 +228,25 @@ class FrontendController extends Controller
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
         return view('frontend.service.view', $data);
+    }
+
+    public function partner(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['visions'] = Vision::all();
+        $data['missions'] = Mission::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        return view('frontend.partner.view', $data);
     }
 
 

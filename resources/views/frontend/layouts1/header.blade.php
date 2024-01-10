@@ -48,7 +48,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href=""><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -59,7 +59,6 @@
                     </a>
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{route('home1')}}">Home</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li> -->
                         <li classs="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">About Us </a>
                             <ul class="dropdown-menu p-3" style="background-color:#b0b54d;">
@@ -68,11 +67,10 @@
                                     <li><a class="btn hvr-hover" href="{{route('why_choose_us')}}">Why Choose Us</a></li>
                                     <li><a class="btn hvr-hover" href="{{route('team')}}">Team</a></li>
                                 </strong>
-								
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('partner')}}">Our Partner</a></li>
                         <li class="nav-item"><a class="nav-link" href="">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="">Services</a></li>
                     </ul>
