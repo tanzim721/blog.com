@@ -50,6 +50,7 @@ Route::get('/why_choose_us', [FrontendController::class, 'why_choose_us'])->name
 Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/team/merchandising', [FrontendController::class, 'merchandising'])->name('merchandising');
 Route::get('/team/supplier_identifier', [FrontendController::class, 'supplier_identifier'])->name('supplier_identifier');
+Route::get('/team/compititive_pricing', [FrontendController::class, 'compititive_pricing'])->name('compititive_pricing');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');
