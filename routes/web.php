@@ -49,6 +49,7 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/why_choose_us', [FrontendController::class, 'why_choose_us'])->name('why_choose_us');
 Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/team/merchandising', [FrontendController::class, 'merchandising'])->name('merchandising');
+Route::get('/team/supplier_identifier', [FrontendController::class, 'supplier_identifier'])->name('supplier_identifier');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');
