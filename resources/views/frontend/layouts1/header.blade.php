@@ -21,7 +21,6 @@
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
-                             
                             <ul class="offer-box">
                                 @foreach($times as $time)   
                                 <li>
@@ -29,7 +28,6 @@
                                 </li>
                                 @endforeach
                             </ul>
-                            
                         </div>
                     </div>
                 </div>
@@ -71,7 +69,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('partner')}}">Our Partner</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('quality')}}">Quality Control</a></li>
                         <li class="nav-item"><a class="nav-link" href="">Services</a></li>
                     </ul>
                 </div>

@@ -15,6 +15,7 @@ use App\Models\Vision;
 use App\Models\Mission;
 use App\Models\BusinessTime;
 use App\Models\Partner;
+use App\Models\PartnerOne;
 use App\Models\Merchandising;
 use App\Models\MerchandisingList;
 use App\Models\ServiceOffer;
@@ -23,9 +24,7 @@ use App\Models\SupplierIdentifier;
 use App\Models\CompititivePricing;
 use App\Models\FactoryEvaluation;
 use App\Models\FactoryEvaluationList;
-
-use App\Models\PartnerOne;
-
+use App\Models\Quality;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -249,5 +248,28 @@ class FrontendController extends Controller
         return view('frontend.partner.view', $data);
     }
 
+    public function quality(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+        $data['qualitys'] = Quality::all();
+        return view('frontend.quality.view', $data);
+    }
 
 }

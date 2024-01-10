@@ -11,11 +11,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2><strong>Service</strong></h2>
+                    <h2><strong>Quality</strong></h2>
                     <ul class="breadcrumb">
                         <strong>
                             <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Our Service</li>
+                            <li class="breadcrumb-item active">Quality</li>
                         </strong>
                     </ul>
                 </div>
@@ -25,12 +25,12 @@
    
 	<div class="box-add-products">
 		<div class="container">
+            <h1 class="text-danger text-center pb-4"><strong>_______Quality Control________</strong></h1>
 			<div class="row">
-                @foreach($partners as $partner)
-				<div class="col-lg-3 col-md-4 col-sm-12 font-weight-bold">
+                @foreach($qualitys as $quality)
+				<div class="col-lg-4 col-md-6 col-sm-12 font-weight-bold p-3">
 					<div class="offer-box-products p-3">
-                        <img src="{{asset('upload/partner_images/'.$partner->image)}}" alt="" />
-                        <p class="text-center text-dark p-2"><strong>{{$partner->short_title}}</strong></p>
+                        <p class="text-center text-dark p-2"><strong>{{$quality->long_title}}</strong></p>
 					</div>
 				</div>
                 @endforeach

@@ -54,6 +54,7 @@ Route::get('/team/compititive_pricing', [FrontendController::class, 'compititive
 Route::get('/team/factory_evaluation', [FrontendController::class, 'factory_evaluation'])->name('factory_evaluation');
 Route::get('/service', [FrontendController::class, 'service'])->name('service');
 Route::get('/partner', [FrontendController::class, 'partner'])->name('partner');
+Route::get('/quality', [FrontendController::class, 'quality'])->name('quality');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');
