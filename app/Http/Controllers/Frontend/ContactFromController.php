@@ -26,6 +26,7 @@ use App\Models\FactoryEvaluation;
 use App\Models\FactoryEvaluationList;
 use App\Models\Quality;
 use App\Models\ContactForm;
+use App\Models\Location;
 
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
@@ -62,6 +63,7 @@ class ContactFromController extends Controller
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
         $data['qualitys'] = Quality::all();
+        $data['locations'] = Location::all();
         return view('frontend.contact.add', $data);
     }
     public function store(Request $request){

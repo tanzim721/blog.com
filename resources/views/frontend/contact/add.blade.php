@@ -57,8 +57,8 @@
                         </form>
                     </div>
                     <div class="contact-info-left">
-                        @foreach($abouts as $about)
-                            <iframe src="{{$}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        @foreach($locations as $location)
+                            <iframe src="{{$location->long_title}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         @endforeach
                     </div>
                 </div>
