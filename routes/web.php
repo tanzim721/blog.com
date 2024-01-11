@@ -36,6 +36,8 @@ use App\Http\Controllers\AopOneController;
 use App\Http\Controllers\AopOneListController;
 use App\Http\Controllers\AopTwoController;
 use App\Http\Controllers\AopTwoListController;
+use App\Http\Controllers\AopThreeController;
+use App\Http\Controllers\AopThreeListController;
 
 
 /*
@@ -368,6 +370,23 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [AopTwoListController::class, 'edit'])->name('panel.aop_two_lists.edit');
         Route::post('/update/{id}', [AopTwoListController::class, 'update'])->name('panel.aop_two_lists.update');
         Route::get('/delete/{id}', [AopTwoListController::class, 'delete'])->name('panel.aop_two_lists.delete');
+    });
+    // AOP three Controller.............
+    Route::prefix('aop_threes')->group(function(){
+        Route::get('/view', [AopThreeController::class, 'view'])->name('panel.aop_threes.view');
+        Route::get('/add', [AopThreeController::class, 'add'])->name('panel.aop_threes.add');
+        Route::post('/store', [AopThreeController::class, 'store'])->name('panel.aop_threes.store');
+        Route::get('/edit/{id}', [AopThreeController::class, 'edit'])->name('panel.aop_threes.edit');
+        Route::post('/update/{id}', [AopThreeController::class, 'update'])->name('panel.aop_threes.update');
+        Route::get('/delete/{id}', [AopThreeController::class, 'delete'])->name('panel.aop_threes.delete');
+    });
+    Route::prefix('aop_three_lists')->group(function(){
+        Route::get('/view', [AopThreeListController::class, 'view'])->name('panel.aop_three_lists.view');
+        Route::get('/add', [AopThreeListController::class, 'add'])->name('panel.aop_three_lists.add');
+        Route::post('/store', [AopThreeListController::class, 'store'])->name('panel.aop_three_lists.store');
+        Route::get('/edit/{id}', [AopThreeListController::class, 'edit'])->name('panel.aop_three_lists.edit');
+        Route::post('/update/{id}', [AopThreeListController::class, 'update'])->name('panel.aop_three_lists.update');
+        Route::get('/delete/{id}', [AopThreeListController::class, 'delete'])->name('panel.aop_three_lists.delete');
     });
     
 

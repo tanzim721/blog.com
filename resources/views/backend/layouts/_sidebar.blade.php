@@ -331,6 +331,16 @@
                         <i class="bi bi-circle"></i><span>IYujin Printing list</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('panel.aop_threes.view')}}">
+                        <i class="bi bi-circle"></i><span>Bruckner Stenter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.aop_three_lists.view')}}">
+                        <i class="bi bi-circle"></i><span>Bruckner Stenter list</span>
+                    </a>
+                </li>
             </ul>
         </li>
         
