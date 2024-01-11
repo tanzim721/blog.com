@@ -54,7 +54,7 @@
             @endforeach
         </div>
     </div>
-    <div class="container">
+    <div class="container contact-info-left">
         <h2 class="text-danger text-center font-weight-bold"><strong>__________We Maintain Quality__________</strong></h2> 
         <h1 class="text-danger text-center font-weight-bold"><strong>We Provide Quality Products For You</strong></h1>
         <div class="row my-5">

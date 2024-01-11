@@ -55,9 +55,9 @@ class ContactFromController extends Controller
         $data['services'] = Service::all();
         $data['servicelists'] = ServiceList::all();
         $data['serviceoffers'] = ServiceOffer::all();
-        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();       
         $data['merchandisings'] = Merchandising::all();
-        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();     
         $data['supplierIdentifiers'] = SupplierIdentifier::all();
         $data['compititivePricings'] = CompititivePricing::all();
         $data['factoryEvaluations'] = FactoryEvaluation::all();

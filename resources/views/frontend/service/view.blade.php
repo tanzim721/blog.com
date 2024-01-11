@@ -26,7 +26,7 @@
     <div class="categories-shop">
         <div class="container">
             <h1 class="text-danger text-center pb-3"><strong>_______Services We Offer________</strong></h1>
-            <div class="row">
+            <div class="row contact-info-left">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     @foreach($serviceoffers as $serviceoffer)
                         <div class="shop-cat-box font-weight-bold p-3">
