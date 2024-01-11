@@ -84,9 +84,11 @@
     </div>
     <!-- End Cart -->
 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58399.44879401442!2d90.2630112742372!3d23.81982405448107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBottola%2C%20Purbo%20Para%2C%20Chandgaon%2C%20Ashulia%2C%20Savar%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1704949367616!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
 
     <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+    <div class="contact-info-left">
         <div class="main-instagram owl-carousel owl-theme">
             @foreach($partners as $partner)
             <div class="item">
@@ -95,7 +97,7 @@
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <p class="text-center text-white"><strong>{{$partner->short_title}}</strong></p>
+                    <p class="text-center text-dark"><strong>{{$partner->short_title}}</strong></p>
                 </div>
             </div>
             @endforeach
