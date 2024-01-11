@@ -352,7 +352,7 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [AopOneListController::class, 'update'])->name('panel.aop_one_lists.update');
         Route::get('/delete/{id}', [AopOneListController::class, 'delete'])->name('panel.aop_one_lists.delete');
     });
-    // AOP one Controller.............
+    // AOP two Controller.............
     Route::prefix('aop_twos')->group(function(){
         Route::get('/view', [AopTwoController::class, 'view'])->name('panel.aop_twos.view');
         Route::get('/add', [AopTwoController::class, 'add'])->name('panel.aop_twos.add');

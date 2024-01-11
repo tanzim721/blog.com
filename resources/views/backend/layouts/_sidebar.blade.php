@@ -323,7 +323,12 @@
                 </li>
                 <li>
                     <a href="{{route('panel.aop_twos.view')}}">
-                        <i class="bi bi-circle"></i><span>Inkjet Machine</span>
+                        <i class="bi bi-circle"></i><span>IYujin Printing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.aop_two_lists.view')}}">
+                        <i class="bi bi-circle"></i><span>IYujin Printing list</span>
                     </a>
                 </li>
             </ul>
