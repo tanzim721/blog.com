@@ -16,6 +16,7 @@ use App\Http\Controllers\VisionController;
 use App\Http\Controllers\NewsEventController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Frontend\ContactFromController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\PartnerOneController;
 use App\Http\Controllers\QualityController;
@@ -55,6 +56,10 @@ Route::get('/team/factory_evaluation', [FrontendController::class, 'factory_eval
 Route::get('/service', [FrontendController::class, 'service'])->name('service');
 Route::get('/partner', [FrontendController::class, 'partner'])->name('partner');
 Route::get('/quality', [FrontendController::class, 'quality'])->name('quality');
+
+    Route::get('/contact_view', [ContactFromController::class, 'view'])->name('panel.contact_from.view');
+    Route::get('/contact', [ContactFromController::class, 'add'])->name('panel.contact_from.add');
+    Route::post('/contact/store', [ContactFromController::class, 'store'])->name('panel.contact_from.store');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'auth_login'])->name('auth_login');

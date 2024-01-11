@@ -70,7 +70,8 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('partner')}}">Our Partner</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('quality')}}">Quality Control</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">AOP</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('panel.contact_from.add')}}">Contact</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

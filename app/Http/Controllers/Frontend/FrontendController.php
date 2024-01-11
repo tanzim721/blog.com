@@ -25,6 +25,8 @@ use App\Models\CompititivePricing;
 use App\Models\FactoryEvaluation;
 use App\Models\FactoryEvaluationList;
 use App\Models\Quality;
+use App\Models\ContactForm;
+
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -272,4 +274,5 @@ class FrontendController extends Controller
         return view('frontend.quality.view', $data);
     }
 
+    
 }

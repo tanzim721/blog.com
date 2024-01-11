@@ -134,8 +134,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.contacts.add')}}">
-                        <i class="bi bi-circle"></i><span>Add Contact</span>
+                    <a href="{{route('panel.contact_from.view')}}">
+                        <i class="bi bi-circle"></i><span>Contact Message</span>
                     </a>
                 </li>
             </ul>
