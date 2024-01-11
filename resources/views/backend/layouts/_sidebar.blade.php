@@ -305,6 +305,24 @@
                 </li>
             </ul>
         </li>
+        <!-- Started AOP  -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#aop-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-people-fill"></i><span>AOP</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="aop-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{route('panel.aop_ones.view')}}">
+                        <i class="bi bi-circle"></i><span>Inkjet Machine</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('panel.aop_ones.view')}}">
+                        <i class="bi bi-circle"></i><span>Add Time</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
         
     </ul>
     

@@ -32,6 +32,7 @@ use App\Http\Controllers\ServiceListController;
 use App\Http\Controllers\ServiceOfferController;
 use App\Http\Controllers\ServiceOfferListController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AopOneController;
 
 
 /*
@@ -330,6 +331,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [ServiceOfferListController::class, 'edit'])->name('panel.service_offer_lists.edit');
         Route::post('/update/{id}', [ServiceOfferListController::class, 'update'])->name('panel.service_offer_lists.update');
         Route::get('/delete/{id}', [ServiceOfferListController::class, 'delete'])->name('panel.service_offer_lists.delete');
+    });
+    // Service Offer Controller.............
+    Route::prefix('aop_ones')->group(function(){
+        Route::get('/view', [AopOneController::class, 'view'])->name('panel.aop_ones.view');
+        Route::get('/add', [AopOneController::class, 'add'])->name('panel.aop_ones.add');
+        Route::post('/store', [AopOneController::class, 'store'])->name('panel.aop_ones.store');
+        Route::get('/edit/{id}', [AopOneController::class, 'edit'])->name('panel.aop_ones.edit');
+        Route::post('/update/{id}', [AopOneController::class, 'update'])->name('panel.aop_ones.update');
+        Route::get('/delete/{id}', [AopOneController::class, 'delete'])->name('panel.aop_ones.delete');
     });
     
 
