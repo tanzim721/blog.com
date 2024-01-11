@@ -274,5 +274,7 @@ class FrontendController extends Controller
         return view('frontend.quality.view', $data);
     }
 
+
+    
     
 }

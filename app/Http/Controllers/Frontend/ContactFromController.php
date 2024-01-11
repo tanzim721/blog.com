@@ -64,7 +64,31 @@ class ContactFromController extends Controller
         $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
         $data['qualitys'] = Quality::all();
         $data['locations'] = Location::all();
-        return view('frontend.contact.add', $data);
+        return view('frontend.contact.add', $data); 
+    }
+    public function location(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();       
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();     
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+        $data['qualitys'] = Quality::all();
+        $data['locations'] = Location::all();
+        return view('frontend.location.view', $data); 
     }
     public function store(Request $request){
         $data = new ContactForm();

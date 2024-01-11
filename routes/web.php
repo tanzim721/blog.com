@@ -60,6 +60,7 @@ Route::get('/quality', [FrontendController::class, 'quality'])->name('quality');
 
     Route::get('/contact_view', [ContactFromController::class, 'view'])->name('panel.contact_from.view');
     Route::get('/contact', [ContactFromController::class, 'add'])->name('panel.contact_from.add');
+    Route::get('/location', [ContactFromController::class, 'location'])->name('panel.location.view');
     Route::post('/contact/store', [ContactFromController::class, 'store'])->name('panel.contact_from.store');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');

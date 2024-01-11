@@ -8,8 +8,8 @@
                     <div class="our-link">
                         <ul>
                             <!-- <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li> -->
-                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                            <li><a href="{{route('panel.location.view')}}"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                            <li><a href="{{route('panel.contact_from.add')}}"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,15 +56,13 @@
                         <img src="{{url('upload/logo_images/',$logo->logo)}}" alt="">
                     </a>
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="{{route('home1')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('home1')}}">Home</a></li>
                         <li classs="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">About Us </a>
-                            <ul class="dropdown-menu p-3" style="background-color:#b0b54d;">
-                                <strong>
-                                    <li><a class="btn hvr-hover" href="{{route('about')}}">About</a></li>
-                                    <li><a class="btn hvr-hover" href="{{route('why_choose_us')}}">Why Choose Us</a></li>
-                                    <li><a class="btn hvr-hover" href="{{route('team')}}">Team</a></li>
-                                </strong>
+                            <ul class="dropdown-menu p-3">
+                                <li><a href="{{route('about')}}"><strong>About</strong></a></li>
+                                <li><a href="{{route('why_choose_us')}}"><strong>Why Choose Us</strong></a></li>
+                                <li><a href="{{route('team')}}"><strong>Team</strong></a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
