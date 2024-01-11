@@ -17,7 +17,7 @@ use Mail;
 use Str;
 use Auth;
 
-
+ 
 class ServiceOfferListController extends Controller
 {
     public function view(){

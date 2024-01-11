@@ -317,8 +317,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('panel.aop_ones.view')}}">
-                        <i class="bi bi-circle"></i><span>Add Time</span>
+                    <a href="{{route('panel.aop_one_lists.view')}}">
+                        <i class="bi bi-circle"></i><span>Inkjet Machine List</span>
                     </a>
                 </li>
             </ul>

@@ -18,29 +18,27 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             AOP List
-                            @if($countAopOnes < 1)
-                            <a href="{{route('panel.aop_ones.add')}}" class="btn btn-success btn-sm" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
-                            @endif
+                            <a href="{{route('panel.aop_one_lists.add')}}" class="btn btn-success btn-sm" style="float:right"><i class="bi bi-plus-circle"></i> Add new</a>
                         </h5>
                         <!-- Table with stripped rows -->
                         <table class="table table-striped">
                             <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Image</th>
                                 <th scope="col">Short Title</th>
+                                <th scope="col">Long Title</th>
                                 <th scope="col" style="width:150px;">Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($allData as $key => $aop_ones)
+                                @foreach($allData as $key => $aop_one_lists)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td><img src="{{(!empty($aop_ones->image))?url('upload/aop_ones_images/',$aop_ones->image):asset('upload/no_image.png')}}" alt="" width="120px" height="120px"></td>
-                                        <td>{{$aop_ones->short_title}}</td>
+                                        <td>{{$aop_one_lists->short_title}}</td>
+                                        <td>{{$aop_one_lists->long_title}}</td>
                                         <td>
-                                            <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.aop_ones.edit', $aop_ones->id)}}"><span class="bi bi-pencil-square"></span></a>
-                                            <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.aop_ones.delete', $aop_ones->id)}}"><span class="bi bi-trash"></span></a>
+                                            <a title="Edit" class="btn btn-sm btn-primary" href="{{route('panel.aop_one_lists.edit', $aop_one_lists->id)}}"><span class="bi bi-pencil-square"></span></a>
+                                            <a title="Delete" class="btn btn-sm btn-danger" href="{{route('panel.aop_one_lists.delete', $aop_one_lists->id)}}"><span class="bi bi-trash"></span></a>
                                         </td>
                                     </tr>
                                 @endforeach

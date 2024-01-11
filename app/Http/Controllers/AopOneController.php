@@ -21,7 +21,7 @@ use Auth;
 class AopOneController extends Controller
 {
     public function view(){
-        // $data['countLogo'] = Logo::count();
+        $data['countAopOnes'] = AopOne::count();
         $data['allData'] = AopOne::all();
         return view('backend.aop_ones.view', $data);
     }
@@ -39,7 +39,7 @@ class AopOneController extends Controller
             $data['image']=$filename;
         }
         $data->save(); 
-        return redirect()->route('panel.aop_ones.view')->with('success', "Real estate Successfully Stored.");
+        return redirect()->route('panel.aop_ones.view')->with('success', "AOPs Successfully Stored.");
     }
     public function edit($id){
         $editData = AopOne::find($id);
@@ -57,7 +57,7 @@ class AopOneController extends Controller
         $data->short_title = $request->short_title;
         $data->updated_by = Auth::user()->id;
         $data->save(); 
-        return redirect()->route('panel.aop_ones.view')->with('success', "Real estate Successfully Updated.");
+        return redirect()->route('panel.aop_ones.view')->with('success', "AOPs Successfully Updated.");
     }
     public function delete($id){
         $data = AopOne::find($id);
@@ -65,6 +65,6 @@ class AopOneController extends Controller
             unlink('upload/aop_ones_images/' . $data->image);
         }
         $data->delete();
-        return redirect()->route('panel.aop_ones.view')->with('error', 'Real estate successfully deleted.');
+        return redirect()->route('panel.aop_ones.view')->with('error', 'AOPs successfully deleted.');
     }
 }
