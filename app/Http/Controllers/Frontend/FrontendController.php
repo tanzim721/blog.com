@@ -26,7 +26,12 @@ use App\Models\FactoryEvaluation;
 use App\Models\FactoryEvaluationList;
 use App\Models\Quality;
 use App\Models\ContactForm;
-
+use App\Models\AopOneList;
+use App\Models\AopTwoList;
+use App\Models\AopThreeList;
+use App\Models\AopOne;
+use App\Models\AopTwo;
+use App\Models\AopThree;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -274,7 +279,36 @@ class FrontendController extends Controller
         return view('frontend.quality.view', $data);
     }
 
+    // started AOP section
+    public function aop(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
 
-    
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+        $data['qualitys'] = Quality::all();
+        $data['AopThreeLists'] = AopThreeList::all();
+        $data['AopOneLists'] = AopOneList::all();
+        $data['AopTwoLists'] = AopTwoList::all();
+        $data['AopOnes'] = AopOne::all();
+        $data['AopTwos'] = AopTwo::all();
+        $data['AopThrees'] = AopThree::all();
+        return view('frontend.aop.view', $data);
+    }
+   
     
 }

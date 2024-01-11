@@ -63,6 +63,7 @@ Route::get('/team/factory_evaluation', [FrontendController::class, 'factory_eval
 Route::get('/service', [FrontendController::class, 'service'])->name('service');
 Route::get('/partner', [FrontendController::class, 'partner'])->name('partner');
 Route::get('/quality', [FrontendController::class, 'quality'])->name('quality');
+Route::get('/aop', [FrontendController::class, 'aop'])->name('aop');
 
     Route::get('/contact_view', [ContactFromController::class, 'view'])->name('panel.contact_from.view');
     Route::get('/contact', [ContactFromController::class, 'add'])->name('panel.contact_from.add');
