@@ -34,6 +34,8 @@ use App\Http\Controllers\ServiceOfferListController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\AopOneController;
 use App\Http\Controllers\AopOneListController;
+use App\Http\Controllers\AopTwoController;
+use App\Http\Controllers\AopTwoListController;
 
 
 /*
@@ -350,8 +352,23 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::post('/update/{id}', [AopOneListController::class, 'update'])->name('panel.aop_one_lists.update');
         Route::get('/delete/{id}', [AopOneListController::class, 'delete'])->name('panel.aop_one_lists.delete');
     });
-    // AOP second Controller.............
-
+    // AOP one Controller.............
+    Route::prefix('aop_twos')->group(function(){
+        Route::get('/view', [AopTwoController::class, 'view'])->name('panel.aop_twos.view');
+        Route::get('/add', [AopTwoController::class, 'add'])->name('panel.aop_twos.add');
+        Route::post('/store', [AopTwoController::class, 'store'])->name('panel.aop_twos.store');
+        Route::get('/edit/{id}', [AopTwoController::class, 'edit'])->name('panel.aop_twos.edit');
+        Route::post('/update/{id}', [AopTwoController::class, 'update'])->name('panel.aop_twos.update');
+        Route::get('/delete/{id}', [AopTwoController::class, 'delete'])->name('panel.aop_twos.delete');
+    });
+    Route::prefix('aop_two_lists')->group(function(){
+        Route::get('/view', [AopTwoListController::class, 'view'])->name('panel.aop_two_lists.view');
+        Route::get('/add', [AopTwoListController::class, 'add'])->name('panel.aop_two_lists.add');
+        Route::post('/store', [AopTwoListController::class, 'store'])->name('panel.aop_two_lists.store');
+        Route::get('/edit/{id}', [AopTwoListController::class, 'edit'])->name('panel.aop_two_lists.edit');
+        Route::post('/update/{id}', [AopTwoListController::class, 'update'])->name('panel.aop_two_lists.update');
+        Route::get('/delete/{id}', [AopTwoListController::class, 'delete'])->name('panel.aop_two_lists.delete');
+    });
     
 
 });

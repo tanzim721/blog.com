@@ -321,6 +321,11 @@
                         <i class="bi bi-circle"></i><span>Inkjet Machine List</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('panel.aop_twos.view')}}">
+                        <i class="bi bi-circle"></i><span>Inkjet Machine</span>
+                    </a>
+                </li>
             </ul>
         </li>
         
