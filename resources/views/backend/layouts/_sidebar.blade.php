@@ -138,6 +138,11 @@
                         <i class="bi bi-circle"></i><span>Contact Message</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('panel.locations.view')}}">
+                        <i class="bi bi-circle"></i><span>Location</span>
+                    </a>
+                </li>
             </ul>
         </li>
         <!-- About Us section ................. -->

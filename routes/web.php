@@ -31,6 +31,7 @@ use App\Http\Controllers\BusinessTimeController;
 use App\Http\Controllers\ServiceListController;
 use App\Http\Controllers\ServiceOfferController;
 use App\Http\Controllers\ServiceOfferListController;
+use App\Http\Controllers\LocationController;
 
 
 /*
@@ -157,6 +158,15 @@ Route::group(['middleware' => 'adminuser'], function(){
         Route::get('/edit/{id}', [ContactController::class, 'edit'])->name('panel.contacts.edit');
         Route::post('/update/{id}', [ContactController::class, 'update'])->name('panel.contacts.update');
         Route::get('/delete/{id}', [ContactController::class, 'delete'])->name('panel.contacts.delete');
+    });
+    // Location Controller.............
+    Route::prefix('locations')->group(function(){
+        Route::get('/view', [LocationController::class, 'view'])->name('panel.locations.view');
+        Route::get('/add', [LocationController::class, 'add'])->name('panel.locations.add');
+        Route::post('/store', [LocationController::class, 'store'])->name('panel.locations.store');
+        Route::get('/edit/{id}', [LocationController::class, 'edit'])->name('panel.locations.edit');
+        Route::post('/update/{id}', [LocationController::class, 'update'])->name('panel.locations.update');
+        Route::get('/delete/{id}', [LocationController::class, 'delete'])->name('panel.locations.delete');
     });
 
     // About us Controller.............
