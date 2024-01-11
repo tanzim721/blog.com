@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-12">
                     <div class="contact-form-right">
-                        @include('frontend.layouts1._message')
+                        @include('frontend.layouts._message')
                         <h2>GET IN TOUCH</h2>
                         <form action="{{route('panel.contact_from.store')}}" id="contactForm" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}

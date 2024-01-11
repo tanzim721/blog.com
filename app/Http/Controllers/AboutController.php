@@ -10,6 +10,8 @@ use App\Models\Slider;
 use App\Models\About;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
+use App\Models\ContactForm;
+
 use Hash;
 use Mail;
 use Str;
@@ -68,4 +70,6 @@ class AboutController extends Controller
         $data->delete();
         return redirect()->route('panel.abouts.view')->with('success', 'About successfully deleted.');
     }
+
+    
 }

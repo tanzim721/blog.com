@@ -62,7 +62,7 @@ class ContactFromController extends Controller
         $data['factoryEvaluations'] = FactoryEvaluation::all();
         $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
         $data['qualitys'] = Quality::all();
-        return view('frontend.contact.view', $data);
+        return view('frontend.contact.add', $data);
     }
     public function store(Request $request){
         $data = new ContactForm();
