@@ -49,7 +49,7 @@
             <div class="row special-list">
                 @foreach($merchandisings as $merchandising)
                 <div class="col-lg-4 col-md-6 special-grid merchandising">
-                    <div class="products-single fix">
+                    <div class="products-single fix"> 
                         <div class="box-img-hover">
                             <div class="type-lb">
                                 <p class="sale">Merchandising</p>

@@ -64,6 +64,9 @@ Route::get('/service', [FrontendController::class, 'service'])->name('service');
 Route::get('/partner', [FrontendController::class, 'partner'])->name('partner');
 Route::get('/quality', [FrontendController::class, 'quality'])->name('quality');
 Route::get('/aop', [FrontendController::class, 'aop'])->name('aop');
+Route::get('/aop/one', [FrontendController::class, 'aop_one'])->name('aop.one');
+Route::get('/aop/two', [FrontendController::class, 'aop_two'])->name('aop.two');
+Route::get('/aop/three', [FrontendController::class, 'aop_three'])->name('aop.three');
 
     Route::get('/contact_view', [ContactFromController::class, 'view'])->name('panel.contact_from.view');
     Route::get('/contact', [ContactFromController::class, 'add'])->name('panel.contact_from.add');
