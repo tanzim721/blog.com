@@ -152,11 +152,9 @@
                 </ul><!-- End Messages Dropdown Items -->
 
             </li><!-- End Messages Nav -->
-
             <li class="nav-item dropdown pe-3">
-
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="{{(!empty($user->image))?url('upload/user_images/',$user->image):asset('upload/no_image.png')}}" alt="Profile" class="rounded-circle" style="width:40px; height:40px;">
+                    <img src="{{(Auth::user()->image!=null && Auth::user()->image!='')? asset('upload/user_images/'.Auth::user()->image) : asset('upload/no_image.png')}}" alt="Profile" class="rounded-circle" style="width:40px; height:40px;">
                     <span class="d-none d-md-block dropdown-toggle ps-2">{{Auth::user()->name}}</span>
                 </a><!-- End Profile Iamge Icon -->
 

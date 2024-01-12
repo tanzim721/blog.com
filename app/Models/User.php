@@ -49,8 +49,8 @@ class User extends Authenticatable
     
     static public function getRecordUser(){
         return self::select('users.*')
-            ->where('is_admin', '=', 0)
-            ->where('is_delete', '=', 0)
+            // ->where('is_admin', '=', 0)
+            // ->where('is_delete', '=', 0)
             ->orderBy('users.id', 'asc')
             ->paginate(3);
     }
