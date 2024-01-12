@@ -3,7 +3,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                        @foreach($contacts as $contact)
+                        <p>Call US : <a href="#"> {{$contact->mobile_no}}</a></p>
+                        @endforeach
                     </div>
                     <div class="our-link">
                         <ul>
@@ -90,7 +92,7 @@
                 <!-- End Atribute Navigation -->
             </div>
             <!-- Start Side Menu -->
-            <div class="side">
+            <!-- <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
@@ -115,7 +117,7 @@
                         </li>
                     </ul>
                 </li>
-            </div>
+            </div> -->
             <!-- End Side Menu -->
         </nav>
         <!-- End Navigation -->

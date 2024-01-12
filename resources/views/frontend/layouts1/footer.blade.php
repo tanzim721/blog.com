@@ -14,7 +14,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
+                        
+                    <!-- <div class="footer-top-box">
                         <h3>Newsletter</h3>
                         <form class="newsletter-box">
                             <div class="form-group">
@@ -23,7 +24,7 @@
                             </div>
                             <button class="btn hvr-hover" type="submit">Submit</button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     @foreach($contacts as $contact)

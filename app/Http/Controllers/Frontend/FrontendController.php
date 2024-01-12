@@ -32,6 +32,7 @@ use App\Models\AopThreeList;
 use App\Models\AopOne;
 use App\Models\AopTwo;
 use App\Models\AopThree;
+use App\Models\Location;
 use App\Mail\RegisterMail;
 use App\Mail\ForgotPasswordMail;
 use Hash;
@@ -58,6 +59,7 @@ class FrontendController extends Controller
         $data['merchandisings'] = Merchandising::all();
         $data['supplierIdentifiers'] = SupplierIdentifier::all();
         $data['compititivePricings'] = CompititivePricing::all();
+        $data['locations'] = Location::all();
         return view('frontend.home1', $data);
     }
 
