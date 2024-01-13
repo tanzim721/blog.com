@@ -25,11 +25,7 @@
                         <i class="bi bi-circle"></i><span>Manage User</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{route('panel.user.add')}}" class="nav-link {{ ($route=='panel.user.add')?'active':'' }}">
-                        <i class="bi bi-circle"></i><span>Add User</span>
-                    </a>
-                </li>
+                
             </ul>
         </li>
         <!-- logo sections  -->
