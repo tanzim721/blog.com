@@ -43,7 +43,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="" class="logo d-flex align-items-center w-auto">
                   <img src="{{asset('/assets/img/logo-white-1.png')}}" alt="">
-                  <span class="d-none d-lg-block">Login Page</span>
+                  <span class="d-none d-lg-block">Sami & Jannat BD LTD</span>
                 </a>
               </div>
               <div class="card mb-3">

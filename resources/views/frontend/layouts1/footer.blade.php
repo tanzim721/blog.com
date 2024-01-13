@@ -57,9 +57,9 @@
                     <div class="footer-link">
                         <h4>Information</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="{{route('about')}}">About Us</a></li>
+                            <li><a href="{{route('service')}}">Customer Service</a></li>
+                            <li><a href="{{route('panel.location.view')}}">Our Sitemap</a></li>
                             <li><a href="#">Terms &amp; Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Delivery Information</a></li>

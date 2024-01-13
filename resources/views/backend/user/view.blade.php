@@ -18,7 +18,7 @@
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                 <img src="{{(!empty($user->image))?url('upload/user_images/',$user->image):asset('upload/no_image.png')}}" alt="Profile" class="rounded-circle" style="width:180px; height:150px;">
                 <h2>{{$user->name}}</h2>
-                <h3>Web Designer</h3>
+                <!-- <h3>Web Designer</h3> -->
                 <div class="social-links mt-2">
                     <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                     <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>

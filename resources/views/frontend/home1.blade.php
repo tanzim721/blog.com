@@ -156,7 +156,7 @@
                     <div class="special-menu text-center">
                         <div class="button-group filter-button-group">
                             <button class="active" data-filter="*">All</button>
-                            <button data-filter=".supplierIdentifier">Top featured</button>
+                            <button data-filter=".supplierIdentifier">Supplier Identifier</button>
                             <button data-filter=".merchandising">Merchandising</button>
                             <button data-filter=".compititivePricing">Compititive Pricing</button>
                         </div>

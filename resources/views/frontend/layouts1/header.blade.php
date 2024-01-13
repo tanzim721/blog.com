@@ -27,7 +27,7 @@
                                 @foreach($times as $time)   
                                 <li>
                                     <i class="fab fa-opencart"></i>{{$time->short_title}}: {{$time->time}}
-                                </li>
+                                </li> 
                                 @endforeach
                             </ul>
                         </div>
