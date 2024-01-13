@@ -18,8 +18,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="login-box">
                         <a href="{{url('login')}}" class="text-white">Sign In</a>
-                        <br>
-                        <a href="{{url('register')}}" class="text-white">Register Here</a>
+                        
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
