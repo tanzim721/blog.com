@@ -11,13 +11,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2><strong>About</strong></h2>
+                    <h2><strong>AOP</strong></h2>
                     <ul class="breadcrumb">
                         <strong>
                             <li class="breadcrumb-item"><a href="{{route('home1')}}">Home</a></li>
                             <li class="breadcrumb-item"><a href="{{route('aop')}}">AOP</a></li>
-                            @foreach($AopOnes as $AopOne)
-                            <li class="breadcrumb-item active">{{$AopOne->short_title}}</li>
+                            @foreach($AopTwos as $AopTwo)
+                            <li class="breadcrumb-item active">{{$AopTwo->short_title}}</li>
                             @endforeach
                         </strong>
                     </ul>
@@ -38,28 +38,28 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="special-menu text-center">
-                        @foreach($AopOnes as $AopOne)
+                        @foreach($AopTwos as $AopTwo)
                         <div class="button-group filter-button-group">
-                            <button data-filter=".one">{{$AopOne->short_title}}</button>
+                            <button data-filter=".Two">{{$AopTwo->short_title}}</button>
                         </div>
                         @endforeach
                     </div>
                 </div>
             </div>
             <div class="row">
-                @foreach($AopOnes as $AopOne)
+                @foreach($AopTwos as $AopTwo)
                 <div class="col-lg-6">
                     <div class="shop-cat-box" style="border:20px solid #b0b54d;">      
-                        <img class="img-fluid" src="{{asset('upload/aop_ones_images/'.$AopOne->image)}}" alt="" />
+                        <img class="img-fluid" src="{{asset('upload/aop_twos_images/'.$AopTwo->image)}}" alt="" />
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="noo-sh-title-top pb-4"><strong>{{$AopOne->short_title}}</strong></h1>
+                    <h1 class="noo-sh-title-top pb-4"><strong>{{$AopTwo->short_title}}</strong></h1>
                     <div class="row">
-                        @foreach($AopOneLists as $AopOneList)
+                        @foreach($AopTwoLists as $AopTwoList)
                         <div class="col-lg-6 col-md-12 col-sm-12">
-                            <h2><strong><i class="fa-solid fa-list text-danger"></i> {{$AopOneList->short_title}}</strong></h2>
-                            <p><strong> {{$AopOneList->long_title}}</strong></p>
+                            <h2><strong><i class="fa-solid fa-list text-danger"></i> {{$AopTwoList->short_title}}</strong></h2>
+                            <p><strong> {{$AopTwoList->long_title}}</strong></p>
                         </div>
                         @endforeach
                     </div>

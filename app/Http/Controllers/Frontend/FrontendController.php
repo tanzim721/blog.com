@@ -340,5 +340,63 @@ class FrontendController extends Controller
         $data['AopThrees'] = AopThree::all();
         return view('frontend.aop.one.view', $data);
     }
-    
+    public function aop_two(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+        $data['qualitys'] = Quality::all();
+        $data['AopThreeLists'] = AopThreeList::all();
+        $data['AopOneLists'] = AopOneList::all();
+        $data['AopTwoLists'] = AopTwoList::all();
+        $data['AopOnes'] = AopOne::all();
+        $data['AopTwos'] = AopTwo::all();
+        $data['AopThrees'] = AopThree::all();
+        return view('frontend.aop.two.view', $data);
+    }
+    public function aop_three(){
+        $data['logo'] = Logo::first();
+        $data['sliders'] = Slider::all();
+        $data['abouts'] = About::all();
+        $data['about_lists'] = AboutList::all();
+        $data['partners'] = Partner::all();
+        $data['partnerones'] = PartnerOne::all();
+
+        $data['contacts'] = Contact::all();
+        $data['times'] = BusinessTime::all();
+        $data['services'] = Service::all();
+        $data['servicelists'] = ServiceList::all();
+        $data['serviceoffers'] = ServiceOffer::all();
+        $data['serviceofferlists'] = ServiceOfferList::all();
+        $data['merchandisings'] = Merchandising::all();
+        $data['MerchandisingLists'] = MerchandisingList::all();
+        $data['supplierIdentifiers'] = SupplierIdentifier::all();
+        $data['compititivePricings'] = CompititivePricing::all();
+        $data['factoryEvaluations'] = FactoryEvaluation::all();
+        $data['factoryEvaluationLists'] = FactoryEvaluationList::all();
+        $data['qualitys'] = Quality::all();
+        $data['AopThreeLists'] = AopThreeList::all();
+        $data['AopOneLists'] = AopOneList::all();
+        $data['AopTwoLists'] = AopTwoList::all();
+        $data['AopOnes'] = AopOne::all();
+        $data['AopTwos'] = AopTwo::all();
+        $data['AopThrees'] = AopThree::all();
+        return view('frontend.aop.three.view', $data);
+    }
+
 }
